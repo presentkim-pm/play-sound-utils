@@ -4,4 +4,5 @@ antigen: kim\present\utils\playsound
 version: 1.0.0
 api: [ 5.0.0 ]
 author: PresentKim
+description: "Provides utils for send PlaySoundPacket more shorter and easier!"
 ...
