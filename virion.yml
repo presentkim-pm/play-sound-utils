@@ -1,0 +1,7 @@
+---
+name: play-sound-utils
+antigen: kim\present\utils\playsound
+version: 1.0.0
+api: [ 5.0.0 ]
+author: PresentKim
+...
