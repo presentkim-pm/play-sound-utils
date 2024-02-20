@@ -1,0 +1,22 @@
+{
+  "name": "presentkim/play-sound-utils",
+  "description": "Provides utils for send PlaySoundPacket more shorter and easier for PocketMine-MP",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "pocketmine/pocketmine-mp": "^5.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "kim\\present\\utils\\playsound\\": [
+        "src/kim/present/utils/playsound/"
+      ]
+    }
+  },
+  "extra": {
+    "virion": {
+      "spec": "3.0",
+      "namespace-root": "kim\\present\\utils\\playsound"
+    }
+  }
+}
