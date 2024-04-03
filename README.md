@@ -23,39 +23,52 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 :heavy_check_mark: Provides util function for create sound packet
+
 - `kim\present\utils\playsound\PlaySoundUtils::createPacket(Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0) : PlaySoundPacket`
 
 :heavy_check_mark: Provides util function for send sound packet
+
 - `kim\present\utils\playsound\PlaySoundUtils::sendTo(Player $player, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void`
 
 :heavy_check_mark: Provides util function for broadcast sound packet
+
 - `kim\present\utils\playsound\PlaySoundUtils::broadcastTo(array $recipients, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void`
 
 -----
 
 ## Installation
+
 See [Official Poggit Virion Documentation](https://github.com/poggit/support/blob/master/virion.md)
 
 -----
 
 ## How to use?
+
 See [Main Document](https://github.com/presentkim-pm/play-sound-utils/blob/main/docs/README.md)
 
 -----
 
 ## License
+
 Distributed under the **MIT**. See [LICENSE][license-url] for more information
 
 
 [poggit-ci-badge]: https://poggit.pmmp.io/ci.shield/presentkim-pm/play-sound-utils/play-sound-utils?style=for-the-badge
+
 [stars-badge]: https://img.shields.io/github/stars/presentkim-pm/play-sound-utils.svg?style=for-the-badge
+
 [license-badge]: https://img.shields.io/github/license/presentkim-pm/play-sound-utils.svg?style=for-the-badge
 
 [poggit-ci-url]: https://poggit.pmmp.io/ci/presentkim-pm/play-sound-utils/play-sound-utils
+
 [stars-url]: https://github.com/presentkim-pm/play-sound-utils/stargazers
+
 [issues-url]: https://github.com/presentkim-pm/play-sound-utils/issues
+
 [license-url]: https://github.com/presentkim-pm/play-sound-utils/blob/main/LICENSE
 
 [project-icon]: https://raw.githubusercontent.com/presentkim-pm/play-sound-utils/main/assets/icon.png

@@ -31,24 +31,25 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
 
 final class PlaySoundUtils{
-	public static function sendTo(Player $player, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void{
-		$player->getNetworkSession()->sendDataPacket(
-			self::createPacket($player->getPosition(), $soundName, $volume, $pitch)
-		);
-	}
 
-	/** @param Player[] $recipients */
-	public static function broadcastTo(
-		array $recipients, string $soundName, float $volume = 1.0, float $pitch = 1.0
-	) : void{
-		foreach($recipients as $recipient){
-			self::sendTo($recipient, $soundName, $volume, $pitch);
-		}
-	}
+    public static function sendTo(Player $player, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void{
+        $player->getNetworkSession()->sendDataPacket(
+            self::createPacket($player->getPosition(), $soundName, $volume, $pitch)
+        );
+    }
 
-	public static function createPacket(
-		Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0
-	) : PlaySoundPacket{
-		return PlaySoundPacket::create($soundName, $vec->x, $vec->y, $vec->z, $volume, $pitch);
-	}
+    /** @param Player[] $recipients */
+    public static function broadcastTo(
+        array $recipients, string $soundName, float $volume = 1.0, float $pitch = 1.0
+    ) : void{
+        foreach($recipients as $recipient){
+            self::sendTo($recipient, $soundName, $volume, $pitch);
+        }
+    }
+
+    public static function createPacket(
+        Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0
+    ) : PlaySoundPacket{
+        return PlaySoundPacket::create($soundName, $vec->x, $vec->y, $vec->z, $volume, $pitch);
+    }
 }
