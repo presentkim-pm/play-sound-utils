@@ -14,7 +14,7 @@
   <img src="https://raw.githubusercontent.com/presentkim-pm/play-sound-utils/main/assets/icon.png" alt="Logo" width="80" height="80"/>
   <h3>play-sound-utils</h3>
   <p align="center">
-    Provides utils for send PlaySoundPacket more shorter and easier!
+    Provides utils for send `PlaySoundPacket` shorter and easier!
 
 [View in Poggit][poggit-ci-url] · [Report a bug][issues-url] · [Request a feature][issues-url]
 
@@ -25,30 +25,72 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+This virion was developed to streamline the boilerplate code required to send sounds by their string names using `PlaySoundPacket`.
+It supports implementations of the `Sound` interface that can be used with `World::addSound()`, 
+and also provides utility methods for sending packets directly.
 
-:heavy_check_mark: Provides util function for create sound packet
+-----
 
-- `kim\present\utils\playsound\PlaySoundUtils::createPacket(Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0) : PlaySoundPacket`
+## How to use?
 
-:heavy_check_mark: Provides util function for send sound packet
+### 1. Create `PlaySound` object for `World::addSound()`
 
-- `kim\present\utils\playsound\PlaySoundUtils::sendTo(Player $player, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void`
+```php
+use pocketmine\math\Vector3;
+use pocketmine\world\World;
+use kim\present\utils\playsound\PlaySound;
 
-:heavy_check_mark: Provides util function for broadcast sound packet
+function sendLevelUpSound(World $world, Vector3 $vec) : void{
+    $world->addSound($vec, new PlaySound("random.levelup"));
+}
+```
 
-- `kim\present\utils\playsound\PlaySoundUtils::broadcastTo(array $recipients, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void`
+
+### 2. Create `PlaySoundPacket` object for `Player::sendDataPacket()`
+
+```php
+use pocketmine\math\Vector3;
+use pocketmine\player\Player;
+use kim\present\utils\playsound\PlaySound;
+
+function sendLevelUpSound(Player $player, Vector3 $vec) : void{
+    $player->getNetworkSession()->sendDataPacket(
+        PlaySound::createPacket($vec, "random.levelup")
+    );
+}
+```
+
+
+### 3. Send `PlaySoundPacket` via static util method
+
+```php
+use pocketmine\math\Vector3;
+use pocketmine\player\Player;
+use kim\present\utils\playsound\PlaySound;
+
+function sendLevelUpSound(Player $player, Vector3 $vec) : void{
+    PlaySound::sendTo($player, "random.levelup");
+}
+```
+
+
+### 4. Using `VanillaPlaySounds` for `World::addSound()`
+
+```php
+use pocketmine\math\Vector3;
+use pocketmine\world\World;
+use kim\present\utils\playsound\VanillaPlaySounds;
+
+function sendLevelUpSound(World $world, Vector3 $vec) : void{
+    $world->addSound($vec, VanillaPlaySounds::LEVELUP());
+}
+```
 
 -----
 
 ## Installation
 
 See [Official Poggit Virion Documentation](https://github.com/poggit/support/blob/master/virion.md)
-
------
-
-## How to use?
-
-See [Main Document](https://github.com/presentkim-pm/play-sound-utils/blob/main/docs/README.md)
 
 -----
 
