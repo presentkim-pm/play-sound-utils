@@ -27,26 +27,91 @@ declare(strict_types=1);
 namespace kim\present\utils\playsound;
 
 use pocketmine\math\Vector3;
+use pocketmine\network\mcpe\protocol\ClientboundPacket;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
+use pocketmine\world\sound\Sound;
 
-final class PlaySoundUtils{
+final class PlaySoundUtils implements Sound{
 
+    /**
+     * @param string $soundName The name of the sound to play
+     * @param float  $volume    The volume of the sound, based on 1.0
+     * @param float  $pitch     The pitch of the sound, based on 1.0
+     */
+    public function __construct(
+        private string $soundName,
+        private float $volume = 1.0,
+        private float $pitch = 1.0
+    ){}
+
+    public function getSoundName() : string{
+        return $this->soundName;
+    }
+
+    public function setSoundName(string $soundName) : PlaySoundUtils{
+        $this->soundName = $soundName;
+        return $this;
+    }
+
+    public function getVolume() : float{
+        return $this->volume;
+    }
+
+    public function setVolume(float $volume) : PlaySoundUtils{
+        $this->volume = $volume;
+        return $this;
+    }
+
+    public function getPitch() : float{
+        return $this->pitch;
+    }
+
+    public function setPitch(float $pitch) : PlaySoundUtils{
+        $this->pitch = $pitch;
+        return $this;
+    }
+
+    /** @return ClientboundPacket[] */
+    public function encode(Vector3 $pos) : array{
+        return [self::createPacket($pos, $this->soundName, $this->volume, $this->pitch)];
+    }
+
+    /**
+     * @param Player $player    The player to send the sound to
+     * @param string $soundName The name of the sound to play
+     * @param float  $volume    The volume of the sound, based on 1.0
+     * @param float  $pitch     The pitch of the sound, based on 1.0
+     */
     public static function sendTo(Player $player, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void{
         $player->getNetworkSession()->sendDataPacket(
             self::createPacket($player->getPosition(), $soundName, $volume, $pitch)
         );
     }
 
-    /** @param Player[] $recipients */
+    /**
+     * @param Player[] $recipients The players to send the sound to
+     * @param string   $soundName  The name of the sound to play
+     * @param float    $volume     The volume of the sound, based on 1.0
+     * @param float    $pitch      The pitch of the sound, based on 1.0
+     */
     public static function broadcastTo(
-        array $recipients, string $soundName, float $volume = 1.0, float $pitch = 1.0
+        array $recipients,
+        string $soundName,
+        float $volume = 1.0,
+        float $pitch = 1.0
     ) : void{
         foreach($recipients as $recipient){
             self::sendTo($recipient, $soundName, $volume, $pitch);
         }
     }
 
+    /**
+     * @param Vector3 $vec       The position to play the sound
+     * @param string  $soundName The name of the sound to play
+     * @param float   $volume    The volume of the sound, based on 1.0
+     * @param float   $pitch     The pitch of the sound, based on 1.0
+     */
     public static function createPacket(
         Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0
     ) : PlaySoundPacket{
