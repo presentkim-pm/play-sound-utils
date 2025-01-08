@@ -32,7 +32,7 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
 use pocketmine\world\sound\Sound;
 
-final class PlaySoundUtils implements Sound{
+final class PlaySound implements Sound{
 
     /**
      * @param string $soundName The name of the sound to play
@@ -49,7 +49,7 @@ final class PlaySoundUtils implements Sound{
         return $this->soundName;
     }
 
-    public function setSoundName(string $soundName) : PlaySoundUtils{
+    public function setSoundName(string $soundName) : self{
         $this->soundName = $soundName;
         return $this;
     }
@@ -58,7 +58,7 @@ final class PlaySoundUtils implements Sound{
         return $this->volume;
     }
 
-    public function setVolume(float $volume) : PlaySoundUtils{
+    public function setVolume(float $volume) : self{
         $this->volume = $volume;
         return $this;
     }
@@ -67,7 +67,7 @@ final class PlaySoundUtils implements Sound{
         return $this->pitch;
     }
 
-    public function setPitch(float $pitch) : PlaySoundUtils{
+    public function setPitch(float $pitch) : self{
         $this->pitch = $pitch;
         return $this;
     }
@@ -117,4 +117,5 @@ final class PlaySoundUtils implements Sound{
     ) : PlaySoundPacket{
         return PlaySoundPacket::create($soundName, $vec->x, $vec->y, $vec->z, $volume, $pitch);
     }
+
 }
