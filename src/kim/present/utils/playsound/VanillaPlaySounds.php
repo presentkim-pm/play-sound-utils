@@ -122,7 +122,7 @@ use pocketmine\utils\CloningRegistryTrait;
  * @method static PlaySound CAMERA_TAKE_PICTURE
  * @method static PlaySound SCRAPE
  */
-final readonly class VanillaPlaySounds{
+final class VanillaPlaySounds{
     use CloningRegistryTrait;
 
     protected static function register($key, string $soundName) : void{
