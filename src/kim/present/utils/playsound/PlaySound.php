@@ -27,6 +27,7 @@ declare(strict_types=1);
 namespace kim\present\utils\playsound;
 
 use pocketmine\math\Vector3;
+use pocketmine\network\mcpe\NetworkBroadcastUtils;
 use pocketmine\network\mcpe\protocol\ClientboundPacket;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
@@ -75,6 +76,24 @@ final class PlaySound implements Sound{
     /** @return ClientboundPacket[] */
     public function encode(Vector3 $pos) : array{
         return [self::createPacket($pos, $this->soundName, $this->volume, $this->pitch)];
+    }
+
+    /**
+     * @param Player|Player[] $recipients The player to send the sound to
+     * @param Vector3|null    $vec        The position to play the sound, or null to play at the player's position
+     */
+    public function send(Player|array $recipients, ?Vector3 $vec = null) : void{
+        /** @var Player[] $recipients */
+        $recipients = (array) $recipients;
+        if($vec === null){
+            foreach($recipients as $recipient){
+                foreach($this->encode($recipient->getPosition()) as $packet){
+                    $recipient->getNetworkSession()->sendDataPacket($packet);
+                }
+            }
+        }else{
+            NetworkBroadcastUtils::broadcastPackets($recipients, $this->encode($vec));
+        }
     }
 
     /**
