@@ -83,8 +83,9 @@ final class PlaySound implements Sound{
      * @param Vector3|null    $vec        The position to play the sound, or null to play at the player's position
      */
     public function send(Player|array $recipients, ?Vector3 $vec = null) : void{
-        /** @var Player[] $recipients */
-        $recipients = (array) $recipients;
+        if($recipients instanceof Player){
+            $recipients = [$recipients];
+        }
         if($vec === null){
             foreach($recipients as $recipient){
                 foreach($this->encode($recipient->getPosition()) as $packet){
