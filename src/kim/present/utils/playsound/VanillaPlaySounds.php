@@ -125,7 +125,7 @@ use pocketmine\utils\CloningRegistryTrait;
 final class VanillaPlaySounds{
     use CloningRegistryTrait;
 
-    protected static function register($key, string $soundName) : void{
+    protected static function register(string $key, string $soundName) : void{
         self::_registryRegister($key, new PlaySound($soundName));
     }
 
