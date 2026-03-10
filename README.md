@@ -86,6 +86,15 @@ function sendLevelUpSound(World $world, Vector3 $vec) : void{
 }
 ```
 
+#### Notes about `VanillaPlaySounds` traits and constants
+
+- Category-based traits are generated under the `kim\present\utils\playsound\defaults` namespace.  
+  - Example: category `"ui"` -> `kim\present\utils\playsound\defaults\VanillaPlaySoundsUiTrait`.
+- Each trait provides:
+  - `public const` constants for sound name **strings** (e.g. `VanillaPlaySounds::LEVELUP`).
+  - `public static` methods for `PlaySound` instances (e.g. `VanillaPlaySounds::LEVELUP()`).
+- Use **constants** when you only need the raw sound name string, and use **methods** when you need a `PlaySound` object for `World::addSound()` or similar APIs.
+
 -----
 
 ## Installation
