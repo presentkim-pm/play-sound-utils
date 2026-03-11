@@ -31,6 +31,13 @@ and also provides utility methods for sending packets directly.
 
 -----
 
+## Requirements
+
+- PocketMine-MP **5.x**
+- PHP **8.2**
+
+-----
+
 ## How to use?
 
 ### 1. Create `PlaySound` object for `World::addSound()`
@@ -42,6 +49,18 @@ use kim\present\utils\playsound\PlaySound;
 
 function sendLevelUpSound(World $world, Vector3 $vec) : void{
     $world->addSound($vec, new PlaySound("random.levelup"));
+}
+```
+
+You can also customize volume and pitch:
+
+```php
+use pocketmine\math\Vector3;
+use pocketmine\world\World;
+use kim\present\utils\playsound\PlaySound;
+
+function sendCustomSound(World $world, Vector3 $vec) : void{
+    $world->addSound($vec, new PlaySound("random.levelup", volume: 0.8, pitch: 1.2));
 }
 ```
 
@@ -64,12 +83,23 @@ function sendLevelUpSound(Player $player, Vector3 $vec) : void{
 ### 3. Send `PlaySoundPacket` via static util method
 
 ```php
-use pocketmine\math\Vector3;
 use pocketmine\player\Player;
 use kim\present\utils\playsound\PlaySound;
 
-function sendLevelUpSound(Player $player, Vector3 $vec) : void{
+function sendLevelUpSound(Player $player) : void{
     PlaySound::sendTo($player, "random.levelup");
+}
+```
+
+If you want to send to multiple recipients:
+
+```php
+use pocketmine\player\Player;
+use kim\present\utils\playsound\PlaySound;
+
+/** @param Player[] $players */
+function broadcastLevelUpSound(array $players) : void{
+    PlaySound::broadcastTo($players, "random.levelup", volume: 1.0, pitch: 1.0);
 }
 ```
 
