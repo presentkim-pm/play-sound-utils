@@ -36,14 +36,16 @@ use pocketmine\world\sound\Sound;
 final class PlaySound implements Sound{
 
     /**
-     * @param string $soundName The name of the sound to play
-     * @param float  $volume    The volume of the sound, based on 1.0
-     * @param float  $pitch     The pitch of the sound, based on 1.0
+     * @param string   $soundName The name of the sound to play
+     * @param float    $volume    The volume of the sound, based on 1.0
+     * @param float    $pitch     The pitch of the sound, based on 1.0
+     * @param int|null $serverSoundHandle The optional value for sound handle (Added 1.26.20)
      */
     public function __construct(
         private string $soundName,
         private float $volume = 1.0,
-        private float $pitch = 1.0
+        private float $pitch = 1.0,
+        private ?int $serverSoundHandle = null
     ){}
 
     public function getSoundName() : string{
@@ -73,9 +75,18 @@ final class PlaySound implements Sound{
         return $this;
     }
 
+    public function getServerSoundHandle() : ?int{
+        return $this->serverSoundHandle;
+    }
+
+    public function setServerSoundHandle(?int $serverSoundHandle) : PlaySound{
+        $this->serverSoundHandle = $serverSoundHandle;
+        return $this;
+    }
+
     /** @return ClientboundPacket[] */
     public function encode(Vector3 $pos) : array{
-        return [self::createPacket($pos, $this->soundName, $this->volume, $this->pitch)];
+        return [self::createPacket($pos, $this->soundName, $this->volume, $this->pitch, $this->serverSoundHandle)];
     }
 
     /**
