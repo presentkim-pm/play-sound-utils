@@ -133,9 +133,9 @@ final class PlaySound implements Sound{
      * @param float   $pitch     The pitch of the sound, based on 1.0
      */
     public static function createPacket(
-        Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0
+        Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0, ?int $serverSoundHandle = null
     ) : PlaySoundPacket{
-        return PlaySoundPacket::create($soundName, $vec->x, $vec->y, $vec->z, $volume, $pitch);
+        return PlaySoundPacket::create($soundName, $vec->x, $vec->y, $vec->z, $volume, $pitch, $serverSoundHandle);
     }
 
 }
