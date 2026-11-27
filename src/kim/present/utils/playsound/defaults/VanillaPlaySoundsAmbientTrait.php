@@ -33,7 +33,7 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "ambient".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
@@ -76,6 +76,8 @@ trait VanillaPlaySoundsAmbientTrait{
     public const WARPED_FOREST_LOOP = 'ambient.warped_forest.loop';
     public const AMBIENT_WARPED_FOREST_MOOD = 'ambient.warped_forest.mood';
     public const WARPED_FOREST_MOOD = 'ambient.warped_forest.mood';
+    public const BLOCK_POTENT_SULFUR_AMBIENT = 'block.potent_sulfur.ambient';
+    public const POTENT_SULFUR_AMBIENT = 'block.potent_sulfur.ambient';
     public const ENTITY_GENERIC_SPLASH = 'entity.generic.splash';
     public const GENERIC_SPLASH = 'entity.generic.splash';
     public const FIREWORK_BLAST = 'firework.blast';
@@ -164,6 +166,10 @@ trait VanillaPlaySoundsAmbientTrait{
     public static function AMBIENT_WARPED_FOREST_MOOD() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('ambient.warped_forest.mood')); }
     /** [ambient] ambient.warped_forest.mood @see self::AMBIENT_WARPED_FOREST_MOOD() */
     public static function WARPED_FOREST_MOOD() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('ambient.warped_forest.mood')); }
+    /** [ambient] block.potent_sulfur.ambient */
+    public static function BLOCK_POTENT_SULFUR_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.potent_sulfur.ambient')); }
+    /** [ambient] block.potent_sulfur.ambient @see self::BLOCK_POTENT_SULFUR_AMBIENT() */
+    public static function POTENT_SULFUR_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.potent_sulfur.ambient')); }
     /** [ambient] entity.generic.splash */
     public static function ENTITY_GENERIC_SPLASH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.generic.splash')); }
     /** [ambient] entity.generic.splash @see self::ENTITY_GENERIC_SPLASH() */

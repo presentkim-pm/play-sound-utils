@@ -33,24 +33,18 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "unknown".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
  */
 trait VanillaPlaySoundsUnknownTrait{
 
-    public const GAME_PLAYER_ATTACK_CRITICAL = 'game.player.attack.critical';
-    public const PLAYER_ATTACK_CRITICAL = 'game.player.attack.critical';
     public const SIGN_DYE_USE = 'sign.dye.use';
     public const DYE_USE = 'sign.dye.use';
     public const SIGN_INK_SAC_USE = 'sign.ink_sac.use';
     public const INK_SAC_USE = 'sign.ink_sac.use';
 
-    /** [unknown] game.player.attack.critical */
-    public static function GAME_PLAYER_ATTACK_CRITICAL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('game.player.attack.critical')); }
-    /** [unknown] game.player.attack.critical @see self::GAME_PLAYER_ATTACK_CRITICAL() */
-    public static function PLAYER_ATTACK_CRITICAL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('game.player.attack.critical')); }
     /** [unknown] sign.dye.use */
     public static function SIGN_DYE_USE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('sign.dye.use')); }
     /** [unknown] sign.dye.use @see self::SIGN_DYE_USE() */

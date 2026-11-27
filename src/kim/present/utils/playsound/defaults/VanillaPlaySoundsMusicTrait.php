@@ -33,7 +33,7 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "music".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
@@ -104,6 +104,8 @@ trait VanillaPlaySoundsMusicTrait{
     public const OVERWORLD_FLOWER_FOREST = 'music.overworld.flower_forest';
     public const MUSIC_OVERWORLD_FOREST = 'music.overworld.forest';
     public const OVERWORLD_FOREST = 'music.overworld.forest';
+    public const MUSIC_OVERWORLD_FROZEN_PEAKS = 'music.overworld.frozen_peaks';
+    public const OVERWORLD_FROZEN_PEAKS = 'music.overworld.frozen_peaks';
     public const MUSIC_OVERWORLD_GROVE = 'music.overworld.grove';
     public const OVERWORLD_GROVE = 'music.overworld.grove';
     public const MUSIC_OVERWORLD_JAGGED_PEAKS = 'music.overworld.jagged_peaks';
@@ -114,12 +116,20 @@ trait VanillaPlaySoundsMusicTrait{
     public const OVERWORLD_JUNGLE_EDGE = 'music.overworld.jungle_edge';
     public const MUSIC_OVERWORLD_LUSH_CAVES = 'music.overworld.lush_caves';
     public const OVERWORLD_LUSH_CAVES = 'music.overworld.lush_caves';
+    public const MUSIC_OVERWORLD_MEADOW = 'music.overworld.meadow';
+    public const OVERWORLD_MEADOW = 'music.overworld.meadow';
     public const MUSIC_OVERWORLD_MESA = 'music.overworld.mesa';
     public const OVERWORLD_MESA = 'music.overworld.mesa';
+    public const MUSIC_OVERWORLD_OLD_GROWTH_TAIGA = 'music.overworld.old_growth_taiga';
+    public const OVERWORLD_OLD_GROWTH_TAIGA = 'music.overworld.old_growth_taiga';
     public const MUSIC_OVERWORLD_SNOWY_SLOPES = 'music.overworld.snowy_slopes';
     public const OVERWORLD_SNOWY_SLOPES = 'music.overworld.snowy_slopes';
     public const MUSIC_OVERWORLD_STONY_PEAKS = 'music.overworld.stony_peaks';
     public const OVERWORLD_STONY_PEAKS = 'music.overworld.stony_peaks';
+    public const MUSIC_OVERWORLD_SULFUR_CAVES = 'music.overworld.sulfur_caves';
+    public const OVERWORLD_SULFUR_CAVES = 'music.overworld.sulfur_caves';
+    public const MUSIC_OVERWORLD_SWAMP_MUSIC = 'music.overworld.swamp_music';
+    public const OVERWORLD_SWAMP_MUSIC = 'music.overworld.swamp_music';
 
     /** [music] music.game */
     public static function MUSIC_GAME() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.game')); }
@@ -249,6 +259,10 @@ trait VanillaPlaySoundsMusicTrait{
     public static function MUSIC_OVERWORLD_FOREST() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.forest')); }
     /** [music] music.overworld.forest @see self::MUSIC_OVERWORLD_FOREST() */
     public static function OVERWORLD_FOREST() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.forest')); }
+    /** [music] music.overworld.frozen_peaks */
+    public static function MUSIC_OVERWORLD_FROZEN_PEAKS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.frozen_peaks')); }
+    /** [music] music.overworld.frozen_peaks @see self::MUSIC_OVERWORLD_FROZEN_PEAKS() */
+    public static function OVERWORLD_FROZEN_PEAKS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.frozen_peaks')); }
     /** [music] music.overworld.grove */
     public static function MUSIC_OVERWORLD_GROVE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.grove')); }
     /** [music] music.overworld.grove @see self::MUSIC_OVERWORLD_GROVE() */
@@ -269,10 +283,18 @@ trait VanillaPlaySoundsMusicTrait{
     public static function MUSIC_OVERWORLD_LUSH_CAVES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.lush_caves')); }
     /** [music] music.overworld.lush_caves @see self::MUSIC_OVERWORLD_LUSH_CAVES() */
     public static function OVERWORLD_LUSH_CAVES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.lush_caves')); }
+    /** [music] music.overworld.meadow */
+    public static function MUSIC_OVERWORLD_MEADOW() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.meadow')); }
+    /** [music] music.overworld.meadow @see self::MUSIC_OVERWORLD_MEADOW() */
+    public static function OVERWORLD_MEADOW() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.meadow')); }
     /** [music] music.overworld.mesa */
     public static function MUSIC_OVERWORLD_MESA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.mesa')); }
     /** [music] music.overworld.mesa @see self::MUSIC_OVERWORLD_MESA() */
     public static function OVERWORLD_MESA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.mesa')); }
+    /** [music] music.overworld.old_growth_taiga */
+    public static function MUSIC_OVERWORLD_OLD_GROWTH_TAIGA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.old_growth_taiga')); }
+    /** [music] music.overworld.old_growth_taiga @see self::MUSIC_OVERWORLD_OLD_GROWTH_TAIGA() */
+    public static function OVERWORLD_OLD_GROWTH_TAIGA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.old_growth_taiga')); }
     /** [music] music.overworld.snowy_slopes */
     public static function MUSIC_OVERWORLD_SNOWY_SLOPES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.snowy_slopes')); }
     /** [music] music.overworld.snowy_slopes @see self::MUSIC_OVERWORLD_SNOWY_SLOPES() */
@@ -281,6 +303,14 @@ trait VanillaPlaySoundsMusicTrait{
     public static function MUSIC_OVERWORLD_STONY_PEAKS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.stony_peaks')); }
     /** [music] music.overworld.stony_peaks @see self::MUSIC_OVERWORLD_STONY_PEAKS() */
     public static function OVERWORLD_STONY_PEAKS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.stony_peaks')); }
+    /** [music] music.overworld.sulfur_caves */
+    public static function MUSIC_OVERWORLD_SULFUR_CAVES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.sulfur_caves')); }
+    /** [music] music.overworld.sulfur_caves @see self::MUSIC_OVERWORLD_SULFUR_CAVES() */
+    public static function OVERWORLD_SULFUR_CAVES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.sulfur_caves')); }
+    /** [music] music.overworld.swamp_music */
+    public static function MUSIC_OVERWORLD_SWAMP_MUSIC() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.swamp_music')); }
+    /** [music] music.overworld.swamp_music @see self::MUSIC_OVERWORLD_SWAMP_MUSIC() */
+    public static function OVERWORLD_SWAMP_MUSIC() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('music.overworld.swamp_music')); }
 
 }
 

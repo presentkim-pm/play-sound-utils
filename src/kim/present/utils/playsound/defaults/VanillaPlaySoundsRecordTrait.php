@@ -33,7 +33,7 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "record".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
@@ -96,6 +96,14 @@ trait VanillaPlaySoundsRecordTrait{
     public const SKELETON = 'note.skeleton';
     public const NOTE_SNARE = 'note.snare';
     public const SNARE = 'note.snare';
+    public const NOTE_TRUMPET = 'note.trumpet';
+    public const TRUMPET = 'note.trumpet';
+    public const NOTE_TRUMPET_EXPOSED = 'note.trumpet_exposed';
+    public const TRUMPET_EXPOSED = 'note.trumpet_exposed';
+    public const NOTE_TRUMPET_OXIDIZED = 'note.trumpet_oxidized';
+    public const TRUMPET_OXIDIZED = 'note.trumpet_oxidized';
+    public const NOTE_TRUMPET_WEATHERED = 'note.trumpet_weathered';
+    public const TRUMPET_WEATHERED = 'note.trumpet_weathered';
     public const NOTE_WITHERSKELETON = 'note.witherskeleton';
     public const WITHERSKELETON = 'note.witherskeleton';
     public const NOTE_XYLOPHONE = 'note.xylophone';
@@ -107,6 +115,8 @@ trait VanillaPlaySoundsRecordTrait{
     public const RECORD_5 = 'record.5';
     public const RECORD_BLOCKS = 'record.blocks';
     public const BLOCKS = 'record.blocks';
+    public const RECORD_BOUNCE = 'record.bounce';
+    public const BOUNCE = 'record.bounce';
     public const RECORD_CAT = 'record.cat';
     public const CAT = 'record.cat';
     public const RECORD_CHIRP = 'record.chirp';
@@ -254,6 +264,22 @@ trait VanillaPlaySoundsRecordTrait{
     public static function NOTE_SNARE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.snare')); }
     /** [record] note.snare @see self::NOTE_SNARE() */
     public static function SNARE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.snare')); }
+    /** [record] note.trumpet */
+    public static function NOTE_TRUMPET() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet')); }
+    /** [record] note.trumpet @see self::NOTE_TRUMPET() */
+    public static function TRUMPET() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet')); }
+    /** [record] note.trumpet_exposed */
+    public static function NOTE_TRUMPET_EXPOSED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet_exposed')); }
+    /** [record] note.trumpet_exposed @see self::NOTE_TRUMPET_EXPOSED() */
+    public static function TRUMPET_EXPOSED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet_exposed')); }
+    /** [record] note.trumpet_oxidized */
+    public static function NOTE_TRUMPET_OXIDIZED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet_oxidized')); }
+    /** [record] note.trumpet_oxidized @see self::NOTE_TRUMPET_OXIDIZED() */
+    public static function TRUMPET_OXIDIZED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet_oxidized')); }
+    /** [record] note.trumpet_weathered */
+    public static function NOTE_TRUMPET_WEATHERED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet_weathered')); }
+    /** [record] note.trumpet_weathered @see self::NOTE_TRUMPET_WEATHERED() */
+    public static function TRUMPET_WEATHERED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.trumpet_weathered')); }
     /** [record] note.witherskeleton */
     public static function NOTE_WITHERSKELETON() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('note.witherskeleton')); }
     /** [record] note.witherskeleton @see self::NOTE_WITHERSKELETON() */
@@ -276,6 +302,10 @@ trait VanillaPlaySoundsRecordTrait{
     public static function RECORD_BLOCKS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('record.blocks')); }
     /** [record] record.blocks @see self::RECORD_BLOCKS() */
     public static function BLOCKS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('record.blocks')); }
+    /** [record] record.bounce */
+    public static function RECORD_BOUNCE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('record.bounce')); }
+    /** [record] record.bounce @see self::RECORD_BOUNCE() */
+    public static function BOUNCE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('record.bounce')); }
     /** [record] record.cat */
     public static function RECORD_CAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('record.cat')); }
     /** [record] record.cat @see self::RECORD_CAT() */

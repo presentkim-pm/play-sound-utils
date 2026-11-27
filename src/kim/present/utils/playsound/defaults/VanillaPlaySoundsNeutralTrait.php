@@ -33,7 +33,7 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "neutral".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
@@ -54,6 +54,20 @@ trait VanillaPlaySoundsNeutralTrait{
     public const REPAIR_WOLF = 'armor.repair_wolf';
     public const ARMOR_UNEQUIP_WOLF = 'armor.unequip_wolf';
     public const UNEQUIP_WOLF = 'armor.unequip_wolf';
+    public const BLOCK_CINNABAR_FALL = 'block.cinnabar.fall';
+    public const CINNABAR_FALL = 'block.cinnabar.fall';
+    public const BLOCK_CINNABAR_STEP = 'block.cinnabar.step';
+    public const CINNABAR_STEP = 'block.cinnabar.step';
+    public const BLOCK_POTENT_SULFUR_FALL = 'block.potent_sulfur.fall';
+    public const POTENT_SULFUR_FALL = 'block.potent_sulfur.fall';
+    public const BLOCK_POTENT_SULFUR_STEP = 'block.potent_sulfur.step';
+    public const POTENT_SULFUR_STEP = 'block.potent_sulfur.step';
+    public const BLOCK_SULFUR_FALL = 'block.sulfur.fall';
+    public const SULFUR_FALL = 'block.sulfur.fall';
+    public const BLOCK_SULFUR_STEP = 'block.sulfur.step';
+    public const SULFUR_STEP = 'block.sulfur.step';
+    public const BLOCK_SULFUR_SPIKE_FALL = 'block.sulfur_spike.fall';
+    public const SULFUR_SPIKE_FALL = 'block.sulfur_spike.fall';
     public const CHARGE_SCULK = 'charge.sculk';
     public const COMPONENT_JUMP_TO_BLOCK = 'component.jump_to_block';
     public const JUMP_TO_BLOCK = 'component.jump_to_block';
@@ -61,9 +75,15 @@ trait VanillaPlaySoundsNeutralTrait{
     public const WAX_OFF = 'copper.wax.off';
     public const COPPER_WAX_ON = 'copper.wax.on';
     public const WAX_ON = 'copper.wax.on';
+    public const ENTITY_FOX_TELEPORT = 'entity.fox.teleport';
+    public const FOX_TELEPORT = 'entity.fox.teleport';
     public const FALL_SCULK_SHRIEKER = 'fall.sculk_shrieker';
     public const IMITATE_FUSE = 'imitate.fuse';
     public const FUSE = 'imitate.fuse';
+    public const ITEM_SULFUR_CUBE_EMPTY = 'item.sulfur_cube.empty';
+    public const SULFUR_CUBE_EMPTY = 'item.sulfur_cube.empty';
+    public const ITEM_SULFUR_CUBE_FILL = 'item.sulfur_cube.fill';
+    public const SULFUR_CUBE_FILL = 'item.sulfur_cube.fill';
     public const LEAD_BREAK = 'lead.break';
     public const BREAK = 'lead.break';
     public const LEASHKNOT_BREAK = 'leashknot.break';
@@ -137,6 +157,36 @@ trait VanillaPlaySoundsNeutralTrait{
     public const AXOLOTL_SPLASH = 'mob.axolotl.splash';
     public const MOB_AXOLOTL_SWIM = 'mob.axolotl.swim';
     public const AXOLOTL_SWIM = 'mob.axolotl.swim';
+    public const MOB_BABY_CAT_AMBIENT = 'mob.baby_cat.ambient';
+    public const BABY_CAT_AMBIENT = 'mob.baby_cat.ambient';
+    public const MOB_BABY_CAT_DEATH = 'mob.baby_cat.death';
+    public const BABY_CAT_DEATH = 'mob.baby_cat.death';
+    public const MOB_BABY_CAT_EAT = 'mob.baby_cat.eat';
+    public const BABY_CAT_EAT = 'mob.baby_cat.eat';
+    public const MOB_BABY_CAT_HURT = 'mob.baby_cat.hurt';
+    public const BABY_CAT_HURT = 'mob.baby_cat.hurt';
+    public const MOB_BABY_CHICKEN_AMBIENT = 'mob.baby_chicken.ambient';
+    public const BABY_CHICKEN_AMBIENT = 'mob.baby_chicken.ambient';
+    public const MOB_BABY_CHICKEN_DEATH = 'mob.baby_chicken.death';
+    public const BABY_CHICKEN_DEATH = 'mob.baby_chicken.death';
+    public const MOB_BABY_CHICKEN_HURT = 'mob.baby_chicken.hurt';
+    public const BABY_CHICKEN_HURT = 'mob.baby_chicken.hurt';
+    public const MOB_BABY_CHICKEN_STEP = 'mob.baby_chicken.step';
+    public const BABY_CHICKEN_STEP = 'mob.baby_chicken.step';
+    public const MOB_BABY_HORSE_AMBIENT = 'mob.baby_horse.ambient';
+    public const BABY_HORSE_AMBIENT = 'mob.baby_horse.ambient';
+    public const MOB_BABY_HORSE_ANGRY = 'mob.baby_horse.angry';
+    public const BABY_HORSE_ANGRY = 'mob.baby_horse.angry';
+    public const MOB_BABY_HORSE_BREATHE = 'mob.baby_horse.breathe';
+    public const BABY_HORSE_BREATHE = 'mob.baby_horse.breathe';
+    public const MOB_BABY_HORSE_DEATH = 'mob.baby_horse.death';
+    public const BABY_HORSE_DEATH = 'mob.baby_horse.death';
+    public const MOB_BABY_HORSE_EAT = 'mob.baby_horse.eat';
+    public const BABY_HORSE_EAT = 'mob.baby_horse.eat';
+    public const MOB_BABY_HORSE_HURT = 'mob.baby_horse.hurt';
+    public const BABY_HORSE_HURT = 'mob.baby_horse.hurt';
+    public const MOB_BABY_HORSE_LAND = 'mob.baby_horse.land';
+    public const BABY_HORSE_LAND = 'mob.baby_horse.land';
     public const MOB_BABY_NAUTILUS_AMBIENT = 'mob.baby_nautilus.ambient';
     public const BABY_NAUTILUS_AMBIENT = 'mob.baby_nautilus.ambient';
     public const MOB_BABY_NAUTILUS_AMBIENT_IN_WATER = 'mob.baby_nautilus.ambient.in.water';
@@ -153,6 +203,32 @@ trait VanillaPlaySoundsNeutralTrait{
     public const BABY_NAUTILUS_HURT_IN_WATER = 'mob.baby_nautilus.hurt.in.water';
     public const MOB_BABY_NAUTILUS_SWIM = 'mob.baby_nautilus.swim';
     public const BABY_NAUTILUS_SWIM = 'mob.baby_nautilus.swim';
+    public const MOB_BABY_PIG_AMBIENT = 'mob.baby_pig.ambient';
+    public const BABY_PIG_AMBIENT = 'mob.baby_pig.ambient';
+    public const MOB_BABY_PIG_DEATH = 'mob.baby_pig.death';
+    public const BABY_PIG_DEATH = 'mob.baby_pig.death';
+    public const MOB_BABY_PIG_EAT = 'mob.baby_pig.eat';
+    public const BABY_PIG_EAT = 'mob.baby_pig.eat';
+    public const MOB_BABY_PIG_HURT = 'mob.baby_pig.hurt';
+    public const BABY_PIG_HURT = 'mob.baby_pig.hurt';
+    public const MOB_BABY_PIG_STEP = 'mob.baby_pig.step';
+    public const BABY_PIG_STEP = 'mob.baby_pig.step';
+    public const MOB_BABY_WOLF_BARK = 'mob.baby_wolf.bark';
+    public const BABY_WOLF_BARK = 'mob.baby_wolf.bark';
+    public const MOB_BABY_WOLF_DEATH = 'mob.baby_wolf.death';
+    public const BABY_WOLF_DEATH = 'mob.baby_wolf.death';
+    public const MOB_BABY_WOLF_GROWL = 'mob.baby_wolf.growl';
+    public const BABY_WOLF_GROWL = 'mob.baby_wolf.growl';
+    public const MOB_BABY_WOLF_HURT = 'mob.baby_wolf.hurt';
+    public const BABY_WOLF_HURT = 'mob.baby_wolf.hurt';
+    public const MOB_BABY_WOLF_PANTING = 'mob.baby_wolf.panting';
+    public const BABY_WOLF_PANTING = 'mob.baby_wolf.panting';
+    public const MOB_BABY_WOLF_SHAKE = 'mob.baby_wolf.shake';
+    public const BABY_WOLF_SHAKE = 'mob.baby_wolf.shake';
+    public const MOB_BABY_WOLF_STEP = 'mob.baby_wolf.step';
+    public const BABY_WOLF_STEP = 'mob.baby_wolf.step';
+    public const MOB_BABY_WOLF_WHINE = 'mob.baby_wolf.whine';
+    public const BABY_WOLF_WHINE = 'mob.baby_wolf.whine';
     public const MOB_BAT_DEATH = 'mob.bat.death';
     public const BAT_DEATH = 'mob.bat.death';
     public const MOB_BAT_HURT = 'mob.bat.hurt';
@@ -173,6 +249,14 @@ trait VanillaPlaySoundsNeutralTrait{
     public const BEE_POLLINATE = 'mob.bee.pollinate';
     public const MOB_BEE_STING = 'mob.bee.sting';
     public const BEE_STING = 'mob.bee.sting';
+    public const MOB_BIG_PIG_DEATH = 'mob.big_pig.death';
+    public const BIG_PIG_DEATH = 'mob.big_pig.death';
+    public const MOB_BIG_PIG_EAT = 'mob.big_pig.eat';
+    public const BIG_PIG_EAT = 'mob.big_pig.eat';
+    public const MOB_BIG_PIG_HURT = 'mob.big_pig.hurt';
+    public const BIG_PIG_HURT = 'mob.big_pig.hurt';
+    public const MOB_BIG_PIG_SAY = 'mob.big_pig.say';
+    public const BIG_PIG_SAY = 'mob.big_pig.say';
     public const MOB_CAMEL_AMBIENT = 'mob.camel.ambient';
     public const CAMEL_AMBIENT = 'mob.camel.ambient';
     public const MOB_CAMEL_DASH = 'mob.camel.dash';
@@ -305,6 +389,8 @@ trait VanillaPlaySoundsNeutralTrait{
     public const DOLPHIN_SPLASH = 'mob.dolphin.splash';
     public const MOB_DOLPHIN_SWIM = 'mob.dolphin.swim';
     public const DOLPHIN_SWIM = 'mob.dolphin.swim';
+    public const MOB_FISH_DEATH = 'mob.fish.death';
+    public const FISH_DEATH = 'mob.fish.death';
     public const MOB_FISH_FLOP = 'mob.fish.flop';
     public const FISH_FLOP = 'mob.fish.flop';
     public const MOB_FISH_HURT = 'mob.fish.hurt';
@@ -545,6 +631,20 @@ trait VanillaPlaySoundsNeutralTrait{
     public const LLAMA_STEP = 'mob.llama.step';
     public const MOB_LLAMA_SWAG = 'mob.llama.swag';
     public const LLAMA_SWAG = 'mob.llama.swag';
+    public const MOB_MINI_PIG_DEATH = 'mob.mini_pig.death';
+    public const MINI_PIG_DEATH = 'mob.mini_pig.death';
+    public const MOB_MINI_PIG_EAT = 'mob.mini_pig.eat';
+    public const MINI_PIG_EAT = 'mob.mini_pig.eat';
+    public const MOB_MINI_PIG_HURT = 'mob.mini_pig.hurt';
+    public const MINI_PIG_HURT = 'mob.mini_pig.hurt';
+    public const MOB_MINI_PIG_SAY = 'mob.mini_pig.say';
+    public const MINI_PIG_SAY = 'mob.mini_pig.say';
+    public const MOB_MOODY_COW_DEATH = 'mob.moody_cow.death';
+    public const MOODY_COW_DEATH = 'mob.moody_cow.death';
+    public const MOB_MOODY_COW_HURT = 'mob.moody_cow.hurt';
+    public const MOODY_COW_HURT = 'mob.moody_cow.hurt';
+    public const MOB_MOODY_COW_SAY = 'mob.moody_cow.say';
+    public const MOODY_COW_SAY = 'mob.moody_cow.say';
     public const MOB_MOOSHROOM_CONVERT = 'mob.mooshroom.convert';
     public const MOOSHROOM_CONVERT = 'mob.mooshroom.convert';
     public const MOB_MOOSHROOM_EAT = 'mob.mooshroom.eat';
@@ -615,10 +715,20 @@ trait VanillaPlaySoundsNeutralTrait{
     public const PARROT_IDLE = 'mob.parrot.idle';
     public const MOB_PARROT_STEP = 'mob.parrot.step';
     public const PARROT_STEP = 'mob.parrot.step';
+    public const MOB_PAUSE_GROWTH = 'mob.pause_growth';
+    public const PAUSE_GROWTH = 'mob.pause_growth';
+    public const MOB_PICKY_CHICKEN_DEATH = 'mob.picky_chicken.death';
+    public const PICKY_CHICKEN_DEATH = 'mob.picky_chicken.death';
+    public const MOB_PICKY_CHICKEN_HURT = 'mob.picky_chicken.hurt';
+    public const PICKY_CHICKEN_HURT = 'mob.picky_chicken.hurt';
+    public const MOB_PICKY_CHICKEN_SAY = 'mob.picky_chicken.say';
+    public const PICKY_CHICKEN_SAY = 'mob.picky_chicken.say';
     public const MOB_PIG_BOOST = 'mob.pig.boost';
     public const PIG_BOOST = 'mob.pig.boost';
     public const MOB_PIG_DEATH = 'mob.pig.death';
     public const PIG_DEATH = 'mob.pig.death';
+    public const MOB_PIG_EAT = 'mob.pig.eat';
+    public const PIG_EAT = 'mob.pig.eat';
     public const MOB_PIG_SAY = 'mob.pig.say';
     public const PIG_SAY = 'mob.pig.say';
     public const MOB_PIG_STEP = 'mob.pig.step';
@@ -637,6 +747,16 @@ trait VanillaPlaySoundsNeutralTrait{
     public const RABBIT_HURT = 'mob.rabbit.hurt';
     public const MOB_RABBIT_IDLE = 'mob.rabbit.idle';
     public const RABBIT_IDLE = 'mob.rabbit.idle';
+    public const MOB_RESET_GROWTH = 'mob.reset_growth';
+    public const RESET_GROWTH = 'mob.reset_growth';
+    public const MOB_ROYAL_CAT_AMBIENT = 'mob.royal_cat.ambient';
+    public const ROYAL_CAT_AMBIENT = 'mob.royal_cat.ambient';
+    public const MOB_ROYAL_CAT_DEATH = 'mob.royal_cat.death';
+    public const ROYAL_CAT_DEATH = 'mob.royal_cat.death';
+    public const MOB_ROYAL_CAT_HURT = 'mob.royal_cat.hurt';
+    public const ROYAL_CAT_HURT = 'mob.royal_cat.hurt';
+    public const MOB_ROYAL_CAT_PURREOW = 'mob.royal_cat.purreow';
+    public const ROYAL_CAT_PURREOW = 'mob.royal_cat.purreow';
     public const MOB_SHEEP_SAY = 'mob.sheep.say';
     public const SHEEP_SAY = 'mob.sheep.say';
     public const MOB_SHEEP_STEP = 'mob.sheep.step';
@@ -699,6 +819,76 @@ trait VanillaPlaySoundsNeutralTrait{
     public const STRIDER_STEP_LAVA = 'mob.strider.step_lava';
     public const MOB_STRIDER_TEMPT = 'mob.strider.tempt';
     public const STRIDER_TEMPT = 'mob.strider.tempt';
+    public const MOB_SULFUR_CUBE_ABSORB = 'mob.sulfur_cube.absorb';
+    public const SULFUR_CUBE_ABSORB = 'mob.sulfur_cube.absorb';
+    public const MOB_SULFUR_CUBE_BOUNCE = 'mob.sulfur_cube.bounce';
+    public const SULFUR_CUBE_BOUNCE = 'mob.sulfur_cube.bounce';
+    public const MOB_SULFUR_CUBE_BOUNCY_HIT = 'mob.sulfur_cube.bouncy.hit';
+    public const SULFUR_CUBE_BOUNCY_HIT = 'mob.sulfur_cube.bouncy.hit';
+    public const MOB_SULFUR_CUBE_BOUNCY_PUSH = 'mob.sulfur_cube.bouncy.push';
+    public const SULFUR_CUBE_BOUNCY_PUSH = 'mob.sulfur_cube.bouncy.push';
+    public const MOB_SULFUR_CUBE_DEATH = 'mob.sulfur_cube.death';
+    public const SULFUR_CUBE_DEATH = 'mob.sulfur_cube.death';
+    public const MOB_SULFUR_CUBE_EJECT = 'mob.sulfur_cube.eject';
+    public const SULFUR_CUBE_EJECT = 'mob.sulfur_cube.eject';
+    public const MOB_SULFUR_CUBE_EXPLOSIVE_HIT = 'mob.sulfur_cube.explosive.hit';
+    public const SULFUR_CUBE_EXPLOSIVE_HIT = 'mob.sulfur_cube.explosive.hit';
+    public const MOB_SULFUR_CUBE_EXPLOSIVE_PUSH = 'mob.sulfur_cube.explosive.push';
+    public const SULFUR_CUBE_EXPLOSIVE_PUSH = 'mob.sulfur_cube.explosive.push';
+    public const MOB_SULFUR_CUBE_FAST_FLAT_HIT = 'mob.sulfur_cube.fast_flat.hit';
+    public const SULFUR_CUBE_FAST_FLAT_HIT = 'mob.sulfur_cube.fast_flat.hit';
+    public const MOB_SULFUR_CUBE_FAST_FLAT_PUSH = 'mob.sulfur_cube.fast_flat.push';
+    public const SULFUR_CUBE_FAST_FLAT_PUSH = 'mob.sulfur_cube.fast_flat.push';
+    public const MOB_SULFUR_CUBE_FAST_SLIDING_HIT = 'mob.sulfur_cube.fast_sliding.hit';
+    public const SULFUR_CUBE_FAST_SLIDING_HIT = 'mob.sulfur_cube.fast_sliding.hit';
+    public const MOB_SULFUR_CUBE_FAST_SLIDING_PUSH = 'mob.sulfur_cube.fast_sliding.push';
+    public const SULFUR_CUBE_FAST_SLIDING_PUSH = 'mob.sulfur_cube.fast_sliding.push';
+    public const MOB_SULFUR_CUBE_HIGH_RESISTANCE_HIT = 'mob.sulfur_cube.high_resistance.hit';
+    public const SULFUR_CUBE_HIGH_RESISTANCE_HIT = 'mob.sulfur_cube.high_resistance.hit';
+    public const MOB_SULFUR_CUBE_HIGH_RESISTANCE_PUSH = 'mob.sulfur_cube.high_resistance.push';
+    public const SULFUR_CUBE_HIGH_RESISTANCE_PUSH = 'mob.sulfur_cube.high_resistance.push';
+    public const MOB_SULFUR_CUBE_HOT_HIT = 'mob.sulfur_cube.hot.hit';
+    public const SULFUR_CUBE_HOT_HIT = 'mob.sulfur_cube.hot.hit';
+    public const MOB_SULFUR_CUBE_HOT_PUSH = 'mob.sulfur_cube.hot.push';
+    public const SULFUR_CUBE_HOT_PUSH = 'mob.sulfur_cube.hot.push';
+    public const MOB_SULFUR_CUBE_HURT = 'mob.sulfur_cube.hurt';
+    public const SULFUR_CUBE_HURT = 'mob.sulfur_cube.hurt';
+    public const MOB_SULFUR_CUBE_JUMP = 'mob.sulfur_cube.jump';
+    public const SULFUR_CUBE_JUMP = 'mob.sulfur_cube.jump';
+    public const MOB_SULFUR_CUBE_LANDING = 'mob.sulfur_cube.landing';
+    public const SULFUR_CUBE_LANDING = 'mob.sulfur_cube.landing';
+    public const MOB_SULFUR_CUBE_LIGHT_HIT = 'mob.sulfur_cube.light.hit';
+    public const SULFUR_CUBE_LIGHT_HIT = 'mob.sulfur_cube.light.hit';
+    public const MOB_SULFUR_CUBE_LIGHT_PUSH = 'mob.sulfur_cube.light.push';
+    public const SULFUR_CUBE_LIGHT_PUSH = 'mob.sulfur_cube.light.push';
+    public const MOB_SULFUR_CUBE_REGULAR_HIT = 'mob.sulfur_cube.regular.hit';
+    public const SULFUR_CUBE_REGULAR_HIT = 'mob.sulfur_cube.regular.hit';
+    public const MOB_SULFUR_CUBE_REGULAR_PUSH = 'mob.sulfur_cube.regular.push';
+    public const SULFUR_CUBE_REGULAR_PUSH = 'mob.sulfur_cube.regular.push';
+    public const MOB_SULFUR_CUBE_SLOW_BOUNCY_HIT = 'mob.sulfur_cube.slow_bouncy.hit';
+    public const SULFUR_CUBE_SLOW_BOUNCY_HIT = 'mob.sulfur_cube.slow_bouncy.hit';
+    public const MOB_SULFUR_CUBE_SLOW_BOUNCY_PUSH = 'mob.sulfur_cube.slow_bouncy.push';
+    public const SULFUR_CUBE_SLOW_BOUNCY_PUSH = 'mob.sulfur_cube.slow_bouncy.push';
+    public const MOB_SULFUR_CUBE_SLOW_FLAT_HIT = 'mob.sulfur_cube.slow_flat.hit';
+    public const SULFUR_CUBE_SLOW_FLAT_HIT = 'mob.sulfur_cube.slow_flat.hit';
+    public const MOB_SULFUR_CUBE_SLOW_FLAT_PUSH = 'mob.sulfur_cube.slow_flat.push';
+    public const SULFUR_CUBE_SLOW_FLAT_PUSH = 'mob.sulfur_cube.slow_flat.push';
+    public const MOB_SULFUR_CUBE_SLOW_SLIDING_HIT = 'mob.sulfur_cube.slow_sliding.hit';
+    public const SULFUR_CUBE_SLOW_SLIDING_HIT = 'mob.sulfur_cube.slow_sliding.hit';
+    public const MOB_SULFUR_CUBE_SLOW_SLIDING_PUSH = 'mob.sulfur_cube.slow_sliding.push';
+    public const SULFUR_CUBE_SLOW_SLIDING_PUSH = 'mob.sulfur_cube.slow_sliding.push';
+    public const MOB_SULFUR_CUBE_SMALL_DEATH = 'mob.sulfur_cube.small.death';
+    public const SULFUR_CUBE_SMALL_DEATH = 'mob.sulfur_cube.small.death';
+    public const MOB_SULFUR_CUBE_SMALL_HURT = 'mob.sulfur_cube.small.hurt';
+    public const SULFUR_CUBE_SMALL_HURT = 'mob.sulfur_cube.small.hurt';
+    public const MOB_SULFUR_CUBE_SMALL_JUMP = 'mob.sulfur_cube.small.jump';
+    public const SULFUR_CUBE_SMALL_JUMP = 'mob.sulfur_cube.small.jump';
+    public const MOB_SULFUR_CUBE_SMALL_LANDING = 'mob.sulfur_cube.small.landing';
+    public const SULFUR_CUBE_SMALL_LANDING = 'mob.sulfur_cube.small.landing';
+    public const MOB_SULFUR_CUBE_STICKY_HIT = 'mob.sulfur_cube.sticky.hit';
+    public const SULFUR_CUBE_STICKY_HIT = 'mob.sulfur_cube.sticky.hit';
+    public const MOB_SULFUR_CUBE_STICKY_PUSH = 'mob.sulfur_cube.sticky.push';
+    public const SULFUR_CUBE_STICKY_PUSH = 'mob.sulfur_cube.sticky.push';
     public const MOB_TADPOLE_CONVERT_TO_FROG = 'mob.tadpole.convert_to_frog';
     public const TADPOLE_CONVERT_TO_FROG = 'mob.tadpole.convert_to_frog';
     public const MOB_TADPOLE_DEATH = 'mob.tadpole.death';
@@ -898,6 +1088,34 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function ARMOR_UNEQUIP_WOLF() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.unequip_wolf')); }
     /** [neutral] armor.unequip_wolf @see self::ARMOR_UNEQUIP_WOLF() */
     public static function UNEQUIP_WOLF() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.unequip_wolf')); }
+    /** [neutral] block.cinnabar.fall */
+    public static function BLOCK_CINNABAR_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.cinnabar.fall')); }
+    /** [neutral] block.cinnabar.fall @see self::BLOCK_CINNABAR_FALL() */
+    public static function CINNABAR_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.cinnabar.fall')); }
+    /** [neutral] block.cinnabar.step */
+    public static function BLOCK_CINNABAR_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.cinnabar.step')); }
+    /** [neutral] block.cinnabar.step @see self::BLOCK_CINNABAR_STEP() */
+    public static function CINNABAR_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.cinnabar.step')); }
+    /** [neutral] block.potent_sulfur.fall */
+    public static function BLOCK_POTENT_SULFUR_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.potent_sulfur.fall')); }
+    /** [neutral] block.potent_sulfur.fall @see self::BLOCK_POTENT_SULFUR_FALL() */
+    public static function POTENT_SULFUR_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.potent_sulfur.fall')); }
+    /** [neutral] block.potent_sulfur.step */
+    public static function BLOCK_POTENT_SULFUR_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.potent_sulfur.step')); }
+    /** [neutral] block.potent_sulfur.step @see self::BLOCK_POTENT_SULFUR_STEP() */
+    public static function POTENT_SULFUR_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.potent_sulfur.step')); }
+    /** [neutral] block.sulfur.fall */
+    public static function BLOCK_SULFUR_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur.fall')); }
+    /** [neutral] block.sulfur.fall @see self::BLOCK_SULFUR_FALL() */
+    public static function SULFUR_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur.fall')); }
+    /** [neutral] block.sulfur.step */
+    public static function BLOCK_SULFUR_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur.step')); }
+    /** [neutral] block.sulfur.step @see self::BLOCK_SULFUR_STEP() */
+    public static function SULFUR_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur.step')); }
+    /** [neutral] block.sulfur_spike.fall */
+    public static function BLOCK_SULFUR_SPIKE_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur_spike.fall')); }
+    /** [neutral] block.sulfur_spike.fall @see self::BLOCK_SULFUR_SPIKE_FALL() */
+    public static function SULFUR_SPIKE_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur_spike.fall')); }
     /** [neutral] charge.sculk */
     public static function CHARGE_SCULK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('charge.sculk')); }
     /** [neutral] component.jump_to_block */
@@ -912,12 +1130,24 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function COPPER_WAX_ON() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('copper.wax.on')); }
     /** [neutral] copper.wax.on @see self::COPPER_WAX_ON() */
     public static function WAX_ON() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('copper.wax.on')); }
+    /** [neutral] entity.fox.teleport */
+    public static function ENTITY_FOX_TELEPORT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.fox.teleport')); }
+    /** [neutral] entity.fox.teleport @see self::ENTITY_FOX_TELEPORT() */
+    public static function FOX_TELEPORT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.fox.teleport')); }
     /** [neutral] fall.sculk_shrieker */
     public static function FALL_SCULK_SHRIEKER() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('fall.sculk_shrieker')); }
     /** [neutral] imitate.fuse */
     public static function IMITATE_FUSE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('imitate.fuse')); }
     /** [neutral] imitate.fuse @see self::IMITATE_FUSE() */
     public static function FUSE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('imitate.fuse')); }
+    /** [neutral] item.sulfur_cube.empty */
+    public static function ITEM_SULFUR_CUBE_EMPTY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.sulfur_cube.empty')); }
+    /** [neutral] item.sulfur_cube.empty @see self::ITEM_SULFUR_CUBE_EMPTY() */
+    public static function SULFUR_CUBE_EMPTY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.sulfur_cube.empty')); }
+    /** [neutral] item.sulfur_cube.fill */
+    public static function ITEM_SULFUR_CUBE_FILL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.sulfur_cube.fill')); }
+    /** [neutral] item.sulfur_cube.fill @see self::ITEM_SULFUR_CUBE_FILL() */
+    public static function SULFUR_CUBE_FILL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.sulfur_cube.fill')); }
     /** [neutral] lead.break */
     public static function LEAD_BREAK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('lead.break')); }
     /** [neutral] lead.break @see self::LEAD_BREAK() */
@@ -1064,6 +1294,66 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_AXOLOTL_SWIM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.axolotl.swim')); }
     /** [neutral] mob.axolotl.swim @see self::MOB_AXOLOTL_SWIM() */
     public static function AXOLOTL_SWIM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.axolotl.swim')); }
+    /** [neutral] mob.baby_cat.ambient */
+    public static function MOB_BABY_CAT_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.ambient')); }
+    /** [neutral] mob.baby_cat.ambient @see self::MOB_BABY_CAT_AMBIENT() */
+    public static function BABY_CAT_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.ambient')); }
+    /** [neutral] mob.baby_cat.death */
+    public static function MOB_BABY_CAT_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.death')); }
+    /** [neutral] mob.baby_cat.death @see self::MOB_BABY_CAT_DEATH() */
+    public static function BABY_CAT_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.death')); }
+    /** [neutral] mob.baby_cat.eat */
+    public static function MOB_BABY_CAT_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.eat')); }
+    /** [neutral] mob.baby_cat.eat @see self::MOB_BABY_CAT_EAT() */
+    public static function BABY_CAT_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.eat')); }
+    /** [neutral] mob.baby_cat.hurt */
+    public static function MOB_BABY_CAT_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.hurt')); }
+    /** [neutral] mob.baby_cat.hurt @see self::MOB_BABY_CAT_HURT() */
+    public static function BABY_CAT_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_cat.hurt')); }
+    /** [neutral] mob.baby_chicken.ambient */
+    public static function MOB_BABY_CHICKEN_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.ambient')); }
+    /** [neutral] mob.baby_chicken.ambient @see self::MOB_BABY_CHICKEN_AMBIENT() */
+    public static function BABY_CHICKEN_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.ambient')); }
+    /** [neutral] mob.baby_chicken.death */
+    public static function MOB_BABY_CHICKEN_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.death')); }
+    /** [neutral] mob.baby_chicken.death @see self::MOB_BABY_CHICKEN_DEATH() */
+    public static function BABY_CHICKEN_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.death')); }
+    /** [neutral] mob.baby_chicken.hurt */
+    public static function MOB_BABY_CHICKEN_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.hurt')); }
+    /** [neutral] mob.baby_chicken.hurt @see self::MOB_BABY_CHICKEN_HURT() */
+    public static function BABY_CHICKEN_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.hurt')); }
+    /** [neutral] mob.baby_chicken.step */
+    public static function MOB_BABY_CHICKEN_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.step')); }
+    /** [neutral] mob.baby_chicken.step @see self::MOB_BABY_CHICKEN_STEP() */
+    public static function BABY_CHICKEN_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_chicken.step')); }
+    /** [neutral] mob.baby_horse.ambient */
+    public static function MOB_BABY_HORSE_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.ambient')); }
+    /** [neutral] mob.baby_horse.ambient @see self::MOB_BABY_HORSE_AMBIENT() */
+    public static function BABY_HORSE_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.ambient')); }
+    /** [neutral] mob.baby_horse.angry */
+    public static function MOB_BABY_HORSE_ANGRY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.angry')); }
+    /** [neutral] mob.baby_horse.angry @see self::MOB_BABY_HORSE_ANGRY() */
+    public static function BABY_HORSE_ANGRY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.angry')); }
+    /** [neutral] mob.baby_horse.breathe */
+    public static function MOB_BABY_HORSE_BREATHE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.breathe')); }
+    /** [neutral] mob.baby_horse.breathe @see self::MOB_BABY_HORSE_BREATHE() */
+    public static function BABY_HORSE_BREATHE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.breathe')); }
+    /** [neutral] mob.baby_horse.death */
+    public static function MOB_BABY_HORSE_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.death')); }
+    /** [neutral] mob.baby_horse.death @see self::MOB_BABY_HORSE_DEATH() */
+    public static function BABY_HORSE_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.death')); }
+    /** [neutral] mob.baby_horse.eat */
+    public static function MOB_BABY_HORSE_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.eat')); }
+    /** [neutral] mob.baby_horse.eat @see self::MOB_BABY_HORSE_EAT() */
+    public static function BABY_HORSE_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.eat')); }
+    /** [neutral] mob.baby_horse.hurt */
+    public static function MOB_BABY_HORSE_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.hurt')); }
+    /** [neutral] mob.baby_horse.hurt @see self::MOB_BABY_HORSE_HURT() */
+    public static function BABY_HORSE_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.hurt')); }
+    /** [neutral] mob.baby_horse.land */
+    public static function MOB_BABY_HORSE_LAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.land')); }
+    /** [neutral] mob.baby_horse.land @see self::MOB_BABY_HORSE_LAND() */
+    public static function BABY_HORSE_LAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_horse.land')); }
     /** [neutral] mob.baby_nautilus.ambient */
     public static function MOB_BABY_NAUTILUS_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_nautilus.ambient')); }
     /** [neutral] mob.baby_nautilus.ambient @see self::MOB_BABY_NAUTILUS_AMBIENT() */
@@ -1096,6 +1386,58 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_BABY_NAUTILUS_SWIM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_nautilus.swim')); }
     /** [neutral] mob.baby_nautilus.swim @see self::MOB_BABY_NAUTILUS_SWIM() */
     public static function BABY_NAUTILUS_SWIM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_nautilus.swim')); }
+    /** [neutral] mob.baby_pig.ambient */
+    public static function MOB_BABY_PIG_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.ambient')); }
+    /** [neutral] mob.baby_pig.ambient @see self::MOB_BABY_PIG_AMBIENT() */
+    public static function BABY_PIG_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.ambient')); }
+    /** [neutral] mob.baby_pig.death */
+    public static function MOB_BABY_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.death')); }
+    /** [neutral] mob.baby_pig.death @see self::MOB_BABY_PIG_DEATH() */
+    public static function BABY_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.death')); }
+    /** [neutral] mob.baby_pig.eat */
+    public static function MOB_BABY_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.eat')); }
+    /** [neutral] mob.baby_pig.eat @see self::MOB_BABY_PIG_EAT() */
+    public static function BABY_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.eat')); }
+    /** [neutral] mob.baby_pig.hurt */
+    public static function MOB_BABY_PIG_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.hurt')); }
+    /** [neutral] mob.baby_pig.hurt @see self::MOB_BABY_PIG_HURT() */
+    public static function BABY_PIG_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.hurt')); }
+    /** [neutral] mob.baby_pig.step */
+    public static function MOB_BABY_PIG_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.step')); }
+    /** [neutral] mob.baby_pig.step @see self::MOB_BABY_PIG_STEP() */
+    public static function BABY_PIG_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_pig.step')); }
+    /** [neutral] mob.baby_wolf.bark */
+    public static function MOB_BABY_WOLF_BARK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.bark')); }
+    /** [neutral] mob.baby_wolf.bark @see self::MOB_BABY_WOLF_BARK() */
+    public static function BABY_WOLF_BARK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.bark')); }
+    /** [neutral] mob.baby_wolf.death */
+    public static function MOB_BABY_WOLF_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.death')); }
+    /** [neutral] mob.baby_wolf.death @see self::MOB_BABY_WOLF_DEATH() */
+    public static function BABY_WOLF_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.death')); }
+    /** [neutral] mob.baby_wolf.growl */
+    public static function MOB_BABY_WOLF_GROWL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.growl')); }
+    /** [neutral] mob.baby_wolf.growl @see self::MOB_BABY_WOLF_GROWL() */
+    public static function BABY_WOLF_GROWL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.growl')); }
+    /** [neutral] mob.baby_wolf.hurt */
+    public static function MOB_BABY_WOLF_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.hurt')); }
+    /** [neutral] mob.baby_wolf.hurt @see self::MOB_BABY_WOLF_HURT() */
+    public static function BABY_WOLF_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.hurt')); }
+    /** [neutral] mob.baby_wolf.panting */
+    public static function MOB_BABY_WOLF_PANTING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.panting')); }
+    /** [neutral] mob.baby_wolf.panting @see self::MOB_BABY_WOLF_PANTING() */
+    public static function BABY_WOLF_PANTING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.panting')); }
+    /** [neutral] mob.baby_wolf.shake */
+    public static function MOB_BABY_WOLF_SHAKE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.shake')); }
+    /** [neutral] mob.baby_wolf.shake @see self::MOB_BABY_WOLF_SHAKE() */
+    public static function BABY_WOLF_SHAKE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.shake')); }
+    /** [neutral] mob.baby_wolf.step */
+    public static function MOB_BABY_WOLF_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.step')); }
+    /** [neutral] mob.baby_wolf.step @see self::MOB_BABY_WOLF_STEP() */
+    public static function BABY_WOLF_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.step')); }
+    /** [neutral] mob.baby_wolf.whine */
+    public static function MOB_BABY_WOLF_WHINE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.whine')); }
+    /** [neutral] mob.baby_wolf.whine @see self::MOB_BABY_WOLF_WHINE() */
+    public static function BABY_WOLF_WHINE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.baby_wolf.whine')); }
     /** [neutral] mob.bat.death */
     public static function MOB_BAT_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.bat.death')); }
     /** [neutral] mob.bat.death @see self::MOB_BAT_DEATH() */
@@ -1136,6 +1478,22 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_BEE_STING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.bee.sting')); }
     /** [neutral] mob.bee.sting @see self::MOB_BEE_STING() */
     public static function BEE_STING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.bee.sting')); }
+    /** [neutral] mob.big_pig.death */
+    public static function MOB_BIG_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.death')); }
+    /** [neutral] mob.big_pig.death @see self::MOB_BIG_PIG_DEATH() */
+    public static function BIG_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.death')); }
+    /** [neutral] mob.big_pig.eat */
+    public static function MOB_BIG_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.eat')); }
+    /** [neutral] mob.big_pig.eat @see self::MOB_BIG_PIG_EAT() */
+    public static function BIG_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.eat')); }
+    /** [neutral] mob.big_pig.hurt */
+    public static function MOB_BIG_PIG_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.hurt')); }
+    /** [neutral] mob.big_pig.hurt @see self::MOB_BIG_PIG_HURT() */
+    public static function BIG_PIG_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.hurt')); }
+    /** [neutral] mob.big_pig.say */
+    public static function MOB_BIG_PIG_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.say')); }
+    /** [neutral] mob.big_pig.say @see self::MOB_BIG_PIG_SAY() */
+    public static function BIG_PIG_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.big_pig.say')); }
     /** [neutral] mob.camel.ambient */
     public static function MOB_CAMEL_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.camel.ambient')); }
     /** [neutral] mob.camel.ambient @see self::MOB_CAMEL_AMBIENT() */
@@ -1400,6 +1758,10 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_DOLPHIN_SWIM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.dolphin.swim')); }
     /** [neutral] mob.dolphin.swim @see self::MOB_DOLPHIN_SWIM() */
     public static function DOLPHIN_SWIM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.dolphin.swim')); }
+    /** [neutral] mob.fish.death */
+    public static function MOB_FISH_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.fish.death')); }
+    /** [neutral] mob.fish.death @see self::MOB_FISH_DEATH() */
+    public static function FISH_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.fish.death')); }
     /** [neutral] mob.fish.flop */
     public static function MOB_FISH_FLOP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.fish.flop')); }
     /** [neutral] mob.fish.flop @see self::MOB_FISH_FLOP() */
@@ -1880,6 +2242,34 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_LLAMA_SWAG() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.llama.swag')); }
     /** [neutral] mob.llama.swag @see self::MOB_LLAMA_SWAG() */
     public static function LLAMA_SWAG() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.llama.swag')); }
+    /** [neutral] mob.mini_pig.death */
+    public static function MOB_MINI_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.death')); }
+    /** [neutral] mob.mini_pig.death @see self::MOB_MINI_PIG_DEATH() */
+    public static function MINI_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.death')); }
+    /** [neutral] mob.mini_pig.eat */
+    public static function MOB_MINI_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.eat')); }
+    /** [neutral] mob.mini_pig.eat @see self::MOB_MINI_PIG_EAT() */
+    public static function MINI_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.eat')); }
+    /** [neutral] mob.mini_pig.hurt */
+    public static function MOB_MINI_PIG_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.hurt')); }
+    /** [neutral] mob.mini_pig.hurt @see self::MOB_MINI_PIG_HURT() */
+    public static function MINI_PIG_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.hurt')); }
+    /** [neutral] mob.mini_pig.say */
+    public static function MOB_MINI_PIG_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.say')); }
+    /** [neutral] mob.mini_pig.say @see self::MOB_MINI_PIG_SAY() */
+    public static function MINI_PIG_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mini_pig.say')); }
+    /** [neutral] mob.moody_cow.death */
+    public static function MOB_MOODY_COW_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.moody_cow.death')); }
+    /** [neutral] mob.moody_cow.death @see self::MOB_MOODY_COW_DEATH() */
+    public static function MOODY_COW_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.moody_cow.death')); }
+    /** [neutral] mob.moody_cow.hurt */
+    public static function MOB_MOODY_COW_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.moody_cow.hurt')); }
+    /** [neutral] mob.moody_cow.hurt @see self::MOB_MOODY_COW_HURT() */
+    public static function MOODY_COW_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.moody_cow.hurt')); }
+    /** [neutral] mob.moody_cow.say */
+    public static function MOB_MOODY_COW_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.moody_cow.say')); }
+    /** [neutral] mob.moody_cow.say @see self::MOB_MOODY_COW_SAY() */
+    public static function MOODY_COW_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.moody_cow.say')); }
     /** [neutral] mob.mooshroom.convert */
     public static function MOB_MOOSHROOM_CONVERT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.mooshroom.convert')); }
     /** [neutral] mob.mooshroom.convert @see self::MOB_MOOSHROOM_CONVERT() */
@@ -2020,6 +2410,22 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_PARROT_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.parrot.step')); }
     /** [neutral] mob.parrot.step @see self::MOB_PARROT_STEP() */
     public static function PARROT_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.parrot.step')); }
+    /** [neutral] mob.pause_growth */
+    public static function MOB_PAUSE_GROWTH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pause_growth')); }
+    /** [neutral] mob.pause_growth @see self::MOB_PAUSE_GROWTH() */
+    public static function PAUSE_GROWTH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pause_growth')); }
+    /** [neutral] mob.picky_chicken.death */
+    public static function MOB_PICKY_CHICKEN_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.picky_chicken.death')); }
+    /** [neutral] mob.picky_chicken.death @see self::MOB_PICKY_CHICKEN_DEATH() */
+    public static function PICKY_CHICKEN_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.picky_chicken.death')); }
+    /** [neutral] mob.picky_chicken.hurt */
+    public static function MOB_PICKY_CHICKEN_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.picky_chicken.hurt')); }
+    /** [neutral] mob.picky_chicken.hurt @see self::MOB_PICKY_CHICKEN_HURT() */
+    public static function PICKY_CHICKEN_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.picky_chicken.hurt')); }
+    /** [neutral] mob.picky_chicken.say */
+    public static function MOB_PICKY_CHICKEN_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.picky_chicken.say')); }
+    /** [neutral] mob.picky_chicken.say @see self::MOB_PICKY_CHICKEN_SAY() */
+    public static function PICKY_CHICKEN_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.picky_chicken.say')); }
     /** [neutral] mob.pig.boost */
     public static function MOB_PIG_BOOST() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pig.boost')); }
     /** [neutral] mob.pig.boost @see self::MOB_PIG_BOOST() */
@@ -2028,6 +2434,10 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pig.death')); }
     /** [neutral] mob.pig.death @see self::MOB_PIG_DEATH() */
     public static function PIG_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pig.death')); }
+    /** [neutral] mob.pig.eat */
+    public static function MOB_PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pig.eat')); }
+    /** [neutral] mob.pig.eat @see self::MOB_PIG_EAT() */
+    public static function PIG_EAT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pig.eat')); }
     /** [neutral] mob.pig.say */
     public static function MOB_PIG_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.pig.say')); }
     /** [neutral] mob.pig.say @see self::MOB_PIG_SAY() */
@@ -2064,6 +2474,26 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_RABBIT_IDLE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.rabbit.idle')); }
     /** [neutral] mob.rabbit.idle @see self::MOB_RABBIT_IDLE() */
     public static function RABBIT_IDLE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.rabbit.idle')); }
+    /** [neutral] mob.reset_growth */
+    public static function MOB_RESET_GROWTH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.reset_growth')); }
+    /** [neutral] mob.reset_growth @see self::MOB_RESET_GROWTH() */
+    public static function RESET_GROWTH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.reset_growth')); }
+    /** [neutral] mob.royal_cat.ambient */
+    public static function MOB_ROYAL_CAT_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.ambient')); }
+    /** [neutral] mob.royal_cat.ambient @see self::MOB_ROYAL_CAT_AMBIENT() */
+    public static function ROYAL_CAT_AMBIENT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.ambient')); }
+    /** [neutral] mob.royal_cat.death */
+    public static function MOB_ROYAL_CAT_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.death')); }
+    /** [neutral] mob.royal_cat.death @see self::MOB_ROYAL_CAT_DEATH() */
+    public static function ROYAL_CAT_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.death')); }
+    /** [neutral] mob.royal_cat.hurt */
+    public static function MOB_ROYAL_CAT_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.hurt')); }
+    /** [neutral] mob.royal_cat.hurt @see self::MOB_ROYAL_CAT_HURT() */
+    public static function ROYAL_CAT_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.hurt')); }
+    /** [neutral] mob.royal_cat.purreow */
+    public static function MOB_ROYAL_CAT_PURREOW() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.purreow')); }
+    /** [neutral] mob.royal_cat.purreow @see self::MOB_ROYAL_CAT_PURREOW() */
+    public static function ROYAL_CAT_PURREOW() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.royal_cat.purreow')); }
     /** [neutral] mob.sheep.say */
     public static function MOB_SHEEP_SAY() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sheep.say')); }
     /** [neutral] mob.sheep.say @see self::MOB_SHEEP_SAY() */
@@ -2188,6 +2618,146 @@ trait VanillaPlaySoundsNeutralTrait{
     public static function MOB_STRIDER_TEMPT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.strider.tempt')); }
     /** [neutral] mob.strider.tempt @see self::MOB_STRIDER_TEMPT() */
     public static function STRIDER_TEMPT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.strider.tempt')); }
+    /** [neutral] mob.sulfur_cube.absorb */
+    public static function MOB_SULFUR_CUBE_ABSORB() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.absorb')); }
+    /** [neutral] mob.sulfur_cube.absorb @see self::MOB_SULFUR_CUBE_ABSORB() */
+    public static function SULFUR_CUBE_ABSORB() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.absorb')); }
+    /** [neutral] mob.sulfur_cube.bounce */
+    public static function MOB_SULFUR_CUBE_BOUNCE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.bounce')); }
+    /** [neutral] mob.sulfur_cube.bounce @see self::MOB_SULFUR_CUBE_BOUNCE() */
+    public static function SULFUR_CUBE_BOUNCE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.bounce')); }
+    /** [neutral] mob.sulfur_cube.bouncy.hit */
+    public static function MOB_SULFUR_CUBE_BOUNCY_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.bouncy.hit')); }
+    /** [neutral] mob.sulfur_cube.bouncy.hit @see self::MOB_SULFUR_CUBE_BOUNCY_HIT() */
+    public static function SULFUR_CUBE_BOUNCY_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.bouncy.hit')); }
+    /** [neutral] mob.sulfur_cube.bouncy.push */
+    public static function MOB_SULFUR_CUBE_BOUNCY_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.bouncy.push')); }
+    /** [neutral] mob.sulfur_cube.bouncy.push @see self::MOB_SULFUR_CUBE_BOUNCY_PUSH() */
+    public static function SULFUR_CUBE_BOUNCY_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.bouncy.push')); }
+    /** [neutral] mob.sulfur_cube.death */
+    public static function MOB_SULFUR_CUBE_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.death')); }
+    /** [neutral] mob.sulfur_cube.death @see self::MOB_SULFUR_CUBE_DEATH() */
+    public static function SULFUR_CUBE_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.death')); }
+    /** [neutral] mob.sulfur_cube.eject */
+    public static function MOB_SULFUR_CUBE_EJECT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.eject')); }
+    /** [neutral] mob.sulfur_cube.eject @see self::MOB_SULFUR_CUBE_EJECT() */
+    public static function SULFUR_CUBE_EJECT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.eject')); }
+    /** [neutral] mob.sulfur_cube.explosive.hit */
+    public static function MOB_SULFUR_CUBE_EXPLOSIVE_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.explosive.hit')); }
+    /** [neutral] mob.sulfur_cube.explosive.hit @see self::MOB_SULFUR_CUBE_EXPLOSIVE_HIT() */
+    public static function SULFUR_CUBE_EXPLOSIVE_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.explosive.hit')); }
+    /** [neutral] mob.sulfur_cube.explosive.push */
+    public static function MOB_SULFUR_CUBE_EXPLOSIVE_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.explosive.push')); }
+    /** [neutral] mob.sulfur_cube.explosive.push @see self::MOB_SULFUR_CUBE_EXPLOSIVE_PUSH() */
+    public static function SULFUR_CUBE_EXPLOSIVE_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.explosive.push')); }
+    /** [neutral] mob.sulfur_cube.fast_flat.hit */
+    public static function MOB_SULFUR_CUBE_FAST_FLAT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_flat.hit')); }
+    /** [neutral] mob.sulfur_cube.fast_flat.hit @see self::MOB_SULFUR_CUBE_FAST_FLAT_HIT() */
+    public static function SULFUR_CUBE_FAST_FLAT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_flat.hit')); }
+    /** [neutral] mob.sulfur_cube.fast_flat.push */
+    public static function MOB_SULFUR_CUBE_FAST_FLAT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_flat.push')); }
+    /** [neutral] mob.sulfur_cube.fast_flat.push @see self::MOB_SULFUR_CUBE_FAST_FLAT_PUSH() */
+    public static function SULFUR_CUBE_FAST_FLAT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_flat.push')); }
+    /** [neutral] mob.sulfur_cube.fast_sliding.hit */
+    public static function MOB_SULFUR_CUBE_FAST_SLIDING_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_sliding.hit')); }
+    /** [neutral] mob.sulfur_cube.fast_sliding.hit @see self::MOB_SULFUR_CUBE_FAST_SLIDING_HIT() */
+    public static function SULFUR_CUBE_FAST_SLIDING_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_sliding.hit')); }
+    /** [neutral] mob.sulfur_cube.fast_sliding.push */
+    public static function MOB_SULFUR_CUBE_FAST_SLIDING_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_sliding.push')); }
+    /** [neutral] mob.sulfur_cube.fast_sliding.push @see self::MOB_SULFUR_CUBE_FAST_SLIDING_PUSH() */
+    public static function SULFUR_CUBE_FAST_SLIDING_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.fast_sliding.push')); }
+    /** [neutral] mob.sulfur_cube.high_resistance.hit */
+    public static function MOB_SULFUR_CUBE_HIGH_RESISTANCE_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.high_resistance.hit')); }
+    /** [neutral] mob.sulfur_cube.high_resistance.hit @see self::MOB_SULFUR_CUBE_HIGH_RESISTANCE_HIT() */
+    public static function SULFUR_CUBE_HIGH_RESISTANCE_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.high_resistance.hit')); }
+    /** [neutral] mob.sulfur_cube.high_resistance.push */
+    public static function MOB_SULFUR_CUBE_HIGH_RESISTANCE_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.high_resistance.push')); }
+    /** [neutral] mob.sulfur_cube.high_resistance.push @see self::MOB_SULFUR_CUBE_HIGH_RESISTANCE_PUSH() */
+    public static function SULFUR_CUBE_HIGH_RESISTANCE_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.high_resistance.push')); }
+    /** [neutral] mob.sulfur_cube.hot.hit */
+    public static function MOB_SULFUR_CUBE_HOT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.hot.hit')); }
+    /** [neutral] mob.sulfur_cube.hot.hit @see self::MOB_SULFUR_CUBE_HOT_HIT() */
+    public static function SULFUR_CUBE_HOT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.hot.hit')); }
+    /** [neutral] mob.sulfur_cube.hot.push */
+    public static function MOB_SULFUR_CUBE_HOT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.hot.push')); }
+    /** [neutral] mob.sulfur_cube.hot.push @see self::MOB_SULFUR_CUBE_HOT_PUSH() */
+    public static function SULFUR_CUBE_HOT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.hot.push')); }
+    /** [neutral] mob.sulfur_cube.hurt */
+    public static function MOB_SULFUR_CUBE_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.hurt')); }
+    /** [neutral] mob.sulfur_cube.hurt @see self::MOB_SULFUR_CUBE_HURT() */
+    public static function SULFUR_CUBE_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.hurt')); }
+    /** [neutral] mob.sulfur_cube.jump */
+    public static function MOB_SULFUR_CUBE_JUMP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.jump')); }
+    /** [neutral] mob.sulfur_cube.jump @see self::MOB_SULFUR_CUBE_JUMP() */
+    public static function SULFUR_CUBE_JUMP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.jump')); }
+    /** [neutral] mob.sulfur_cube.landing */
+    public static function MOB_SULFUR_CUBE_LANDING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.landing')); }
+    /** [neutral] mob.sulfur_cube.landing @see self::MOB_SULFUR_CUBE_LANDING() */
+    public static function SULFUR_CUBE_LANDING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.landing')); }
+    /** [neutral] mob.sulfur_cube.light.hit */
+    public static function MOB_SULFUR_CUBE_LIGHT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.light.hit')); }
+    /** [neutral] mob.sulfur_cube.light.hit @see self::MOB_SULFUR_CUBE_LIGHT_HIT() */
+    public static function SULFUR_CUBE_LIGHT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.light.hit')); }
+    /** [neutral] mob.sulfur_cube.light.push */
+    public static function MOB_SULFUR_CUBE_LIGHT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.light.push')); }
+    /** [neutral] mob.sulfur_cube.light.push @see self::MOB_SULFUR_CUBE_LIGHT_PUSH() */
+    public static function SULFUR_CUBE_LIGHT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.light.push')); }
+    /** [neutral] mob.sulfur_cube.regular.hit */
+    public static function MOB_SULFUR_CUBE_REGULAR_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.regular.hit')); }
+    /** [neutral] mob.sulfur_cube.regular.hit @see self::MOB_SULFUR_CUBE_REGULAR_HIT() */
+    public static function SULFUR_CUBE_REGULAR_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.regular.hit')); }
+    /** [neutral] mob.sulfur_cube.regular.push */
+    public static function MOB_SULFUR_CUBE_REGULAR_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.regular.push')); }
+    /** [neutral] mob.sulfur_cube.regular.push @see self::MOB_SULFUR_CUBE_REGULAR_PUSH() */
+    public static function SULFUR_CUBE_REGULAR_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.regular.push')); }
+    /** [neutral] mob.sulfur_cube.slow_bouncy.hit */
+    public static function MOB_SULFUR_CUBE_SLOW_BOUNCY_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_bouncy.hit')); }
+    /** [neutral] mob.sulfur_cube.slow_bouncy.hit @see self::MOB_SULFUR_CUBE_SLOW_BOUNCY_HIT() */
+    public static function SULFUR_CUBE_SLOW_BOUNCY_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_bouncy.hit')); }
+    /** [neutral] mob.sulfur_cube.slow_bouncy.push */
+    public static function MOB_SULFUR_CUBE_SLOW_BOUNCY_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_bouncy.push')); }
+    /** [neutral] mob.sulfur_cube.slow_bouncy.push @see self::MOB_SULFUR_CUBE_SLOW_BOUNCY_PUSH() */
+    public static function SULFUR_CUBE_SLOW_BOUNCY_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_bouncy.push')); }
+    /** [neutral] mob.sulfur_cube.slow_flat.hit */
+    public static function MOB_SULFUR_CUBE_SLOW_FLAT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_flat.hit')); }
+    /** [neutral] mob.sulfur_cube.slow_flat.hit @see self::MOB_SULFUR_CUBE_SLOW_FLAT_HIT() */
+    public static function SULFUR_CUBE_SLOW_FLAT_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_flat.hit')); }
+    /** [neutral] mob.sulfur_cube.slow_flat.push */
+    public static function MOB_SULFUR_CUBE_SLOW_FLAT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_flat.push')); }
+    /** [neutral] mob.sulfur_cube.slow_flat.push @see self::MOB_SULFUR_CUBE_SLOW_FLAT_PUSH() */
+    public static function SULFUR_CUBE_SLOW_FLAT_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_flat.push')); }
+    /** [neutral] mob.sulfur_cube.slow_sliding.hit */
+    public static function MOB_SULFUR_CUBE_SLOW_SLIDING_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_sliding.hit')); }
+    /** [neutral] mob.sulfur_cube.slow_sliding.hit @see self::MOB_SULFUR_CUBE_SLOW_SLIDING_HIT() */
+    public static function SULFUR_CUBE_SLOW_SLIDING_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_sliding.hit')); }
+    /** [neutral] mob.sulfur_cube.slow_sliding.push */
+    public static function MOB_SULFUR_CUBE_SLOW_SLIDING_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_sliding.push')); }
+    /** [neutral] mob.sulfur_cube.slow_sliding.push @see self::MOB_SULFUR_CUBE_SLOW_SLIDING_PUSH() */
+    public static function SULFUR_CUBE_SLOW_SLIDING_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.slow_sliding.push')); }
+    /** [neutral] mob.sulfur_cube.small.death */
+    public static function MOB_SULFUR_CUBE_SMALL_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.death')); }
+    /** [neutral] mob.sulfur_cube.small.death @see self::MOB_SULFUR_CUBE_SMALL_DEATH() */
+    public static function SULFUR_CUBE_SMALL_DEATH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.death')); }
+    /** [neutral] mob.sulfur_cube.small.hurt */
+    public static function MOB_SULFUR_CUBE_SMALL_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.hurt')); }
+    /** [neutral] mob.sulfur_cube.small.hurt @see self::MOB_SULFUR_CUBE_SMALL_HURT() */
+    public static function SULFUR_CUBE_SMALL_HURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.hurt')); }
+    /** [neutral] mob.sulfur_cube.small.jump */
+    public static function MOB_SULFUR_CUBE_SMALL_JUMP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.jump')); }
+    /** [neutral] mob.sulfur_cube.small.jump @see self::MOB_SULFUR_CUBE_SMALL_JUMP() */
+    public static function SULFUR_CUBE_SMALL_JUMP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.jump')); }
+    /** [neutral] mob.sulfur_cube.small.landing */
+    public static function MOB_SULFUR_CUBE_SMALL_LANDING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.landing')); }
+    /** [neutral] mob.sulfur_cube.small.landing @see self::MOB_SULFUR_CUBE_SMALL_LANDING() */
+    public static function SULFUR_CUBE_SMALL_LANDING() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.small.landing')); }
+    /** [neutral] mob.sulfur_cube.sticky.hit */
+    public static function MOB_SULFUR_CUBE_STICKY_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.sticky.hit')); }
+    /** [neutral] mob.sulfur_cube.sticky.hit @see self::MOB_SULFUR_CUBE_STICKY_HIT() */
+    public static function SULFUR_CUBE_STICKY_HIT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.sticky.hit')); }
+    /** [neutral] mob.sulfur_cube.sticky.push */
+    public static function MOB_SULFUR_CUBE_STICKY_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.sticky.push')); }
+    /** [neutral] mob.sulfur_cube.sticky.push @see self::MOB_SULFUR_CUBE_STICKY_PUSH() */
+    public static function SULFUR_CUBE_STICKY_PUSH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.sulfur_cube.sticky.push')); }
     /** [neutral] mob.tadpole.convert_to_frog */
     public static function MOB_TADPOLE_CONVERT_TO_FROG() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.tadpole.convert_to_frog')); }
     /** [neutral] mob.tadpole.convert_to_frog @see self::MOB_TADPOLE_CONVERT_TO_FROG() */

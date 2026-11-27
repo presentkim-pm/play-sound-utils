@@ -1,9 +1,0 @@
----
-branches:
-  - main
-projects:
-  play-sound-utils:
-    path: ""
-    model: virion
-    type: library
-...

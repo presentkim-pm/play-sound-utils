@@ -40,11 +40,18 @@ use kim\present\utils\playsound\defaults\VanillaPlaySoundsUnknownTrait;
 use kim\present\utils\playsound\defaults\VanillaPlaySoundsWeatherTrait;
 
 /**
- * Allows getting a new instance of all vanilla sounds. Last updated for 1.26.0.2.
+ * Allows getting a new instance of all vanilla sounds. Last updated for 1.26.60.5.
  *
- * @note This class is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
+ * @note  This class is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  *
- * @see  https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/sounds/sound_definitions.json
+ * @usage Category traits are generated under the {@see \kim\present\utils\playsound\defaults} namespace
+ *        and follow the naming rule: category "ui" =>
+ *        {@see \kim\present\utils\playsound\defaults\VanillaPlaySoundsUiTrait}. Each trait provides both string
+ *        constants (for raw sound names) and static methods (for {@see PlaySound} instances). Use constants when you
+ *        only need the sound name string, and use methods when you need a {@see PlaySound} object that can be passed
+ *        to {@see \pocketmine\world\World::addSound()}.
+ *
+ * @see   https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/sounds/sound_definitions.json
  */
 final readonly class VanillaPlaySounds{
 

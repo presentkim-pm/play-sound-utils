@@ -33,7 +33,7 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "hostile".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
@@ -52,6 +52,8 @@ trait VanillaPlaySoundsHostileTrait{
     public const WITHER_SKELETON_STEP = 'entity.wither_skeleton.step';
     public const ENTITY_ZOMBIE_CONVERTED_TO_DROWNED = 'entity.zombie.converted_to_drowned';
     public const ZOMBIE_CONVERTED_TO_DROWNED = 'entity.zombie.converted_to_drowned';
+    public const ITEM_FIRECHARGE_USE = 'item.firecharge.use';
+    public const FIRECHARGE_USE = 'item.firecharge.use';
     public const MOB_BLAZE_BREATHE = 'mob.blaze.breathe';
     public const BLAZE_BREATHE = 'mob.blaze.breathe';
     public const MOB_BLAZE_DEATH = 'mob.blaze.death';
@@ -544,6 +546,7 @@ trait VanillaPlaySoundsHostileTrait{
     public const ZOMBIEPIG_ZPIGDEATH = 'mob.zombiepig.zpigdeath';
     public const MOB_ZOMBIEPIG_ZPIGHURT = 'mob.zombiepig.zpighurt';
     public const ZOMBIEPIG_ZPIGHURT = 'mob.zombiepig.zpighurt';
+    public const PLACE_SLIME_BIG = 'place.slime.big';
     public const RAID_HORN = 'raid.horn';
     public const HORN = 'raid.horn';
 
@@ -571,6 +574,10 @@ trait VanillaPlaySoundsHostileTrait{
     public static function ENTITY_ZOMBIE_CONVERTED_TO_DROWNED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.zombie.converted_to_drowned')); }
     /** [hostile] entity.zombie.converted_to_drowned @see self::ENTITY_ZOMBIE_CONVERTED_TO_DROWNED() */
     public static function ZOMBIE_CONVERTED_TO_DROWNED() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.zombie.converted_to_drowned')); }
+    /** [hostile] item.firecharge.use */
+    public static function ITEM_FIRECHARGE_USE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.firecharge.use')); }
+    /** [hostile] item.firecharge.use @see self::ITEM_FIRECHARGE_USE() */
+    public static function FIRECHARGE_USE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.firecharge.use')); }
     /** [hostile] mob.blaze.breathe */
     public static function MOB_BLAZE_BREATHE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.blaze.breathe')); }
     /** [hostile] mob.blaze.breathe @see self::MOB_BLAZE_BREATHE() */
@@ -1555,6 +1562,8 @@ trait VanillaPlaySoundsHostileTrait{
     public static function MOB_ZOMBIEPIG_ZPIGHURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.zombiepig.zpighurt')); }
     /** [hostile] mob.zombiepig.zpighurt @see self::MOB_ZOMBIEPIG_ZPIGHURT() */
     public static function ZOMBIEPIG_ZPIGHURT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mob.zombiepig.zpighurt')); }
+    /** [hostile] place.slime.big */
+    public static function PLACE_SLIME_BIG() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('place.slime.big')); }
     /** [hostile] raid.horn */
     public static function RAID_HORN() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('raid.horn')); }
     /** [hostile] raid.horn @see self::RAID_HORN() */

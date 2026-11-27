@@ -33,7 +33,7 @@ use kim\present\utils\playsound\VanillaPlaySounds;
 /**
  * Provides vanilla play sounds and sound name constants for category "player".
  *
- * Last updated for 1.26.0.2.
+ * Last updated for 1.26.60.5.
  *
  * @internal This trait is generated automatically from {@link build/VanillaPlaySounds.generator.php}.
  * @see      VanillaPlaySounds
@@ -54,6 +54,8 @@ trait VanillaPlaySoundsPlayerTrait{
     public const EQUIP_CHAIN = 'armor.equip_chain';
     public const ARMOR_EQUIP_DIAMOND = 'armor.equip_diamond';
     public const EQUIP_DIAMOND = 'armor.equip_diamond';
+    public const ARMOR_EQUIP_ELYTRA = 'armor.equip_elytra';
+    public const EQUIP_ELYTRA = 'armor.equip_elytra';
     public const ARMOR_EQUIP_GENERIC = 'armor.equip_generic';
     public const EQUIP_GENERIC = 'armor.equip_generic';
     public const ARMOR_EQUIP_GOLD = 'armor.equip_gold';
@@ -82,6 +84,10 @@ trait VanillaPlaySoundsPlayerTrait{
     public const RESIN_BRICK_FALL = 'block.resin_brick.fall';
     public const BLOCK_RESIN_BRICK_STEP = 'block.resin_brick.step';
     public const RESIN_BRICK_STEP = 'block.resin_brick.step';
+    public const BLOCK_SULFUR_SPIKE_LAND = 'block.sulfur_spike.land';
+    public const SULFUR_SPIKE_LAND = 'block.sulfur_spike.land';
+    public const BLOCK_SULFUR_SPIKE_STEP = 'block.sulfur_spike.step';
+    public const SULFUR_SPIKE_STEP = 'block.sulfur_spike.step';
     public const BLOCK_WEEPING_VINES_FALL = 'block.weeping_vines.fall';
     public const WEEPING_VINES_FALL = 'block.weeping_vines.fall';
     public const BLOCK_WEEPING_VINES_JUMP = 'block.weeping_vines.jump';
@@ -130,6 +136,8 @@ trait VanillaPlaySoundsPlayerTrait{
     public const THORNS = 'damage.thorns';
     public const ELYTRA_LOOP = 'elytra.loop';
     public const LOOP = 'elytra.loop';
+    public const ENTITY_PLAYER_TELEPORT = 'entity.player.teleport';
+    public const PLAYER_TELEPORT = 'entity.player.teleport';
     public const FALL_AMETHYST_BLOCK = 'fall.amethyst_block';
     public const FALL_AMETHYST_CLUSTER = 'fall.amethyst_cluster';
     public const FALL_ANCIENT_DEBRIS = 'fall.ancient_debris';
@@ -186,6 +194,8 @@ trait VanillaPlaySoundsPlayerTrait{
     public const FALL_TUFF = 'fall.tuff';
     public const FALL_VINES = 'fall.vines';
     public const FALL_WOOD = 'fall.wood';
+    public const GAME_PLAYER_ATTACK_CRITICAL = 'game.player.attack.critical';
+    public const PLAYER_ATTACK_CRITICAL = 'game.player.attack.critical';
     public const GAME_PLAYER_ATTACK_NODAMAGE = 'game.player.attack.nodamage';
     public const PLAYER_ATTACK_NODAMAGE = 'game.player.attack.nodamage';
     public const GAME_PLAYER_ATTACK_STRONG = 'game.player.attack.strong';
@@ -238,30 +248,84 @@ trait VanillaPlaySoundsPlayerTrait{
     public const WOODEN_SPEAR_HIT = 'item.wooden_spear.hit';
     public const ITEM_WOODEN_SPEAR_USE = 'item.wooden_spear.use';
     public const WOODEN_SPEAR_USE = 'item.wooden_spear.use';
+    public const JUMP_ANCIENT_DEBRIS = 'jump.ancient_debris';
     public const JUMP_AZALEA = 'jump.azalea';
+    public const JUMP_BASALT = 'jump.basalt';
     public const JUMP_BIG_DRIPLEAF = 'jump.big_dripleaf';
+    public const JUMP_BONE_BLOCK = 'jump.bone_block';
     public const JUMP_CAVE_VINES = 'jump.cave_vines';
+    public const JUMP_CHAIN = 'jump.chain';
+    public const JUMP_CLOTH = 'jump.cloth';
+    public const JUMP_CORAL = 'jump.coral';
     public const JUMP_DEEPSLATE = 'jump.deepslate';
     public const JUMP_DEEPSLATE_BRICKS = 'jump.deepslate_bricks';
     public const JUMP_DIRT_WITH_ROOTS = 'jump.dirt_with_roots';
     public const JUMP_DRIPSTONE_BLOCK = 'jump.dripstone_block';
+    public const JUMP_GRASS = 'jump.grass';
+    public const JUMP_GRAVEL = 'jump.gravel';
     public const JUMP_HANGING_ROOTS = 'jump.hanging_roots';
+    public const JUMP_HONEY_BLOCK = 'jump.honey_block';
     public const JUMP_MOSS = 'jump.moss';
+    public const JUMP_NETHER_BRICK = 'jump.nether_brick';
+    public const JUMP_NETHER_GOLD_ORE = 'jump.nether_gold_ore';
+    public const JUMP_NETHER_SPROUTS = 'jump.nether_sprouts';
+    public const JUMP_NETHER_WART = 'jump.nether_wart';
+    public const JUMP_NETHERITE = 'jump.netherite';
+    public const JUMP_NETHERRACK = 'jump.netherrack';
+    public const JUMP_NYLIUM = 'jump.nylium';
     public const JUMP_POINTED_DRIPSTONE = 'jump.pointed_dripstone';
+    public const JUMP_ROOTS = 'jump.roots';
+    public const JUMP_SAND = 'jump.sand';
     public const JUMP_SCULK_SENSOR = 'jump.sculk_sensor';
+    public const JUMP_SHROOMLIGHT = 'jump.shroomlight';
+    public const JUMP_SLIME = 'jump.slime';
+    public const JUMP_SNOW = 'jump.snow';
+    public const JUMP_SOUL_SAND = 'jump.soul_sand';
+    public const JUMP_SOUL_SOIL = 'jump.soul_soil';
     public const JUMP_SPORE_BLOSSOM = 'jump.spore_blossom';
+    public const JUMP_STEM = 'jump.stem';
+    public const JUMP_STONE = 'jump.stone';
+    public const JUMP_VINES = 'jump.vines';
+    public const JUMP_WOOD = 'jump.wood';
+    public const LAND_ANCIENT_DEBRIS = 'land.ancient_debris';
     public const LAND_AZALEA = 'land.azalea';
+    public const LAND_BASALT = 'land.basalt';
     public const LAND_BIG_DRIPLEAF = 'land.big_dripleaf';
+    public const LAND_BONE_BLOCK = 'land.bone_block';
     public const LAND_CAVE_VINES = 'land.cave_vines';
+    public const LAND_CHAIN = 'land.chain';
+    public const LAND_CLOTH = 'land.cloth';
+    public const LAND_CORAL = 'land.coral';
     public const LAND_DEEPSLATE = 'land.deepslate';
     public const LAND_DEEPSLATE_BRICKS = 'land.deepslate_bricks';
     public const LAND_DIRT_WITH_ROOTS = 'land.dirt_with_roots';
     public const LAND_DRIPSTONE_BLOCK = 'land.dripstone_block';
+    public const LAND_GRASS = 'land.grass';
+    public const LAND_GRAVEL = 'land.gravel';
     public const LAND_HANGING_ROOTS = 'land.hanging_roots';
+    public const LAND_HONEY_BLOCK = 'land.honey_block';
     public const LAND_MOSS = 'land.moss';
+    public const LAND_NETHER_BRICK = 'land.nether_brick';
+    public const LAND_NETHER_GOLD_ORE = 'land.nether_gold_ore';
+    public const LAND_NETHER_SPROUTS = 'land.nether_sprouts';
+    public const LAND_NETHER_WART = 'land.nether_wart';
+    public const LAND_NETHERITE = 'land.netherite';
+    public const LAND_NETHERRACK = 'land.netherrack';
+    public const LAND_NYLIUM = 'land.nylium';
     public const LAND_POINTED_DRIPSTONE = 'land.pointed_dripstone';
+    public const LAND_ROOTS = 'land.roots';
+    public const LAND_SAND = 'land.sand';
     public const LAND_SCULK_SENSOR = 'land.sculk_sensor';
+    public const LAND_SHROOMLIGHT = 'land.shroomlight';
+    public const LAND_SLIME = 'land.slime';
+    public const LAND_SNOW = 'land.snow';
+    public const LAND_SOUL_SAND = 'land.soul_sand';
+    public const LAND_SOUL_SOIL = 'land.soul_soil';
     public const LAND_SPORE_BLOSSOM = 'land.spore_blossom';
+    public const LAND_STEM = 'land.stem';
+    public const LAND_STONE = 'land.stone';
+    public const LAND_VINES = 'land.vines';
+    public const LAND_WOOD = 'land.wood';
     public const MACE_HEAVY_SMASH_GROUND = 'mace.heavy_smash_ground';
     public const HEAVY_SMASH_GROUND = 'mace.heavy_smash_ground';
     public const MACE_SMASH_AIR = 'mace.smash_air';
@@ -399,6 +463,10 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function ARMOR_EQUIP_DIAMOND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.equip_diamond')); }
     /** [player] armor.equip_diamond @see self::ARMOR_EQUIP_DIAMOND() */
     public static function EQUIP_DIAMOND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.equip_diamond')); }
+    /** [player] armor.equip_elytra */
+    public static function ARMOR_EQUIP_ELYTRA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.equip_elytra')); }
+    /** [player] armor.equip_elytra @see self::ARMOR_EQUIP_ELYTRA() */
+    public static function EQUIP_ELYTRA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.equip_elytra')); }
     /** [player] armor.equip_generic */
     public static function ARMOR_EQUIP_GENERIC() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('armor.equip_generic')); }
     /** [player] armor.equip_generic @see self::ARMOR_EQUIP_GENERIC() */
@@ -455,6 +523,14 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function BLOCK_RESIN_BRICK_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.resin_brick.step')); }
     /** [player] block.resin_brick.step @see self::BLOCK_RESIN_BRICK_STEP() */
     public static function RESIN_BRICK_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.resin_brick.step')); }
+    /** [player] block.sulfur_spike.land */
+    public static function BLOCK_SULFUR_SPIKE_LAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur_spike.land')); }
+    /** [player] block.sulfur_spike.land @see self::BLOCK_SULFUR_SPIKE_LAND() */
+    public static function SULFUR_SPIKE_LAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur_spike.land')); }
+    /** [player] block.sulfur_spike.step */
+    public static function BLOCK_SULFUR_SPIKE_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur_spike.step')); }
+    /** [player] block.sulfur_spike.step @see self::BLOCK_SULFUR_SPIKE_STEP() */
+    public static function SULFUR_SPIKE_STEP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.sulfur_spike.step')); }
     /** [player] block.weeping_vines.fall */
     public static function BLOCK_WEEPING_VINES_FALL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('block.weeping_vines.fall')); }
     /** [player] block.weeping_vines.fall @see self::BLOCK_WEEPING_VINES_FALL() */
@@ -551,6 +627,10 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function ELYTRA_LOOP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('elytra.loop')); }
     /** [player] elytra.loop @see self::ELYTRA_LOOP() */
     public static function LOOP() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('elytra.loop')); }
+    /** [player] entity.player.teleport */
+    public static function ENTITY_PLAYER_TELEPORT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.player.teleport')); }
+    /** [player] entity.player.teleport @see self::ENTITY_PLAYER_TELEPORT() */
+    public static function PLAYER_TELEPORT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('entity.player.teleport')); }
     /** [player] fall.amethyst_block */
     public static function FALL_AMETHYST_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('fall.amethyst_block')); }
     /** [player] fall.amethyst_cluster */
@@ -663,6 +743,10 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function FALL_VINES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('fall.vines')); }
     /** [player] fall.wood */
     public static function FALL_WOOD() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('fall.wood')); }
+    /** [player] game.player.attack.critical */
+    public static function GAME_PLAYER_ATTACK_CRITICAL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('game.player.attack.critical')); }
+    /** [player] game.player.attack.critical @see self::GAME_PLAYER_ATTACK_CRITICAL() */
+    public static function PLAYER_ATTACK_CRITICAL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('game.player.attack.critical')); }
     /** [player] game.player.attack.nodamage */
     public static function GAME_PLAYER_ATTACK_NODAMAGE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('game.player.attack.nodamage')); }
     /** [player] game.player.attack.nodamage @see self::GAME_PLAYER_ATTACK_NODAMAGE() */
@@ -767,12 +851,24 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function ITEM_WOODEN_SPEAR_USE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.wooden_spear.use')); }
     /** [player] item.wooden_spear.use @see self::ITEM_WOODEN_SPEAR_USE() */
     public static function WOODEN_SPEAR_USE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('item.wooden_spear.use')); }
+    /** [player] jump.ancient_debris */
+    public static function JUMP_ANCIENT_DEBRIS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.ancient_debris')); }
     /** [player] jump.azalea */
     public static function JUMP_AZALEA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.azalea')); }
+    /** [player] jump.basalt */
+    public static function JUMP_BASALT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.basalt')); }
     /** [player] jump.big_dripleaf */
     public static function JUMP_BIG_DRIPLEAF() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.big_dripleaf')); }
+    /** [player] jump.bone_block */
+    public static function JUMP_BONE_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.bone_block')); }
     /** [player] jump.cave_vines */
     public static function JUMP_CAVE_VINES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.cave_vines')); }
+    /** [player] jump.chain */
+    public static function JUMP_CHAIN() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.chain')); }
+    /** [player] jump.cloth */
+    public static function JUMP_CLOTH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.cloth')); }
+    /** [player] jump.coral */
+    public static function JUMP_CORAL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.coral')); }
     /** [player] jump.deepslate */
     public static function JUMP_DEEPSLATE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.deepslate')); }
     /** [player] jump.deepslate_bricks */
@@ -781,22 +877,76 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function JUMP_DIRT_WITH_ROOTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.dirt_with_roots')); }
     /** [player] jump.dripstone_block */
     public static function JUMP_DRIPSTONE_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.dripstone_block')); }
+    /** [player] jump.grass */
+    public static function JUMP_GRASS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.grass')); }
+    /** [player] jump.gravel */
+    public static function JUMP_GRAVEL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.gravel')); }
     /** [player] jump.hanging_roots */
     public static function JUMP_HANGING_ROOTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.hanging_roots')); }
+    /** [player] jump.honey_block */
+    public static function JUMP_HONEY_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.honey_block')); }
     /** [player] jump.moss */
     public static function JUMP_MOSS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.moss')); }
+    /** [player] jump.nether_brick */
+    public static function JUMP_NETHER_BRICK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.nether_brick')); }
+    /** [player] jump.nether_gold_ore */
+    public static function JUMP_NETHER_GOLD_ORE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.nether_gold_ore')); }
+    /** [player] jump.nether_sprouts */
+    public static function JUMP_NETHER_SPROUTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.nether_sprouts')); }
+    /** [player] jump.nether_wart */
+    public static function JUMP_NETHER_WART() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.nether_wart')); }
+    /** [player] jump.netherite */
+    public static function JUMP_NETHERITE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.netherite')); }
+    /** [player] jump.netherrack */
+    public static function JUMP_NETHERRACK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.netherrack')); }
+    /** [player] jump.nylium */
+    public static function JUMP_NYLIUM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.nylium')); }
     /** [player] jump.pointed_dripstone */
     public static function JUMP_POINTED_DRIPSTONE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.pointed_dripstone')); }
+    /** [player] jump.roots */
+    public static function JUMP_ROOTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.roots')); }
+    /** [player] jump.sand */
+    public static function JUMP_SAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.sand')); }
     /** [player] jump.sculk_sensor */
     public static function JUMP_SCULK_SENSOR() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.sculk_sensor')); }
+    /** [player] jump.shroomlight */
+    public static function JUMP_SHROOMLIGHT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.shroomlight')); }
+    /** [player] jump.slime */
+    public static function JUMP_SLIME() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.slime')); }
+    /** [player] jump.snow */
+    public static function JUMP_SNOW() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.snow')); }
+    /** [player] jump.soul_sand */
+    public static function JUMP_SOUL_SAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.soul_sand')); }
+    /** [player] jump.soul_soil */
+    public static function JUMP_SOUL_SOIL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.soul_soil')); }
     /** [player] jump.spore_blossom */
     public static function JUMP_SPORE_BLOSSOM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.spore_blossom')); }
+    /** [player] jump.stem */
+    public static function JUMP_STEM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.stem')); }
+    /** [player] jump.stone */
+    public static function JUMP_STONE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.stone')); }
+    /** [player] jump.vines */
+    public static function JUMP_VINES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.vines')); }
+    /** [player] jump.wood */
+    public static function JUMP_WOOD() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('jump.wood')); }
+    /** [player] land.ancient_debris */
+    public static function LAND_ANCIENT_DEBRIS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.ancient_debris')); }
     /** [player] land.azalea */
     public static function LAND_AZALEA() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.azalea')); }
+    /** [player] land.basalt */
+    public static function LAND_BASALT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.basalt')); }
     /** [player] land.big_dripleaf */
     public static function LAND_BIG_DRIPLEAF() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.big_dripleaf')); }
+    /** [player] land.bone_block */
+    public static function LAND_BONE_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.bone_block')); }
     /** [player] land.cave_vines */
     public static function LAND_CAVE_VINES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.cave_vines')); }
+    /** [player] land.chain */
+    public static function LAND_CHAIN() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.chain')); }
+    /** [player] land.cloth */
+    public static function LAND_CLOTH() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.cloth')); }
+    /** [player] land.coral */
+    public static function LAND_CORAL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.coral')); }
     /** [player] land.deepslate */
     public static function LAND_DEEPSLATE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.deepslate')); }
     /** [player] land.deepslate_bricks */
@@ -805,16 +955,58 @@ trait VanillaPlaySoundsPlayerTrait{
     public static function LAND_DIRT_WITH_ROOTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.dirt_with_roots')); }
     /** [player] land.dripstone_block */
     public static function LAND_DRIPSTONE_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.dripstone_block')); }
+    /** [player] land.grass */
+    public static function LAND_GRASS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.grass')); }
+    /** [player] land.gravel */
+    public static function LAND_GRAVEL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.gravel')); }
     /** [player] land.hanging_roots */
     public static function LAND_HANGING_ROOTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.hanging_roots')); }
+    /** [player] land.honey_block */
+    public static function LAND_HONEY_BLOCK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.honey_block')); }
     /** [player] land.moss */
     public static function LAND_MOSS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.moss')); }
+    /** [player] land.nether_brick */
+    public static function LAND_NETHER_BRICK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.nether_brick')); }
+    /** [player] land.nether_gold_ore */
+    public static function LAND_NETHER_GOLD_ORE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.nether_gold_ore')); }
+    /** [player] land.nether_sprouts */
+    public static function LAND_NETHER_SPROUTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.nether_sprouts')); }
+    /** [player] land.nether_wart */
+    public static function LAND_NETHER_WART() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.nether_wart')); }
+    /** [player] land.netherite */
+    public static function LAND_NETHERITE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.netherite')); }
+    /** [player] land.netherrack */
+    public static function LAND_NETHERRACK() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.netherrack')); }
+    /** [player] land.nylium */
+    public static function LAND_NYLIUM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.nylium')); }
     /** [player] land.pointed_dripstone */
     public static function LAND_POINTED_DRIPSTONE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.pointed_dripstone')); }
+    /** [player] land.roots */
+    public static function LAND_ROOTS() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.roots')); }
+    /** [player] land.sand */
+    public static function LAND_SAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.sand')); }
     /** [player] land.sculk_sensor */
     public static function LAND_SCULK_SENSOR() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.sculk_sensor')); }
+    /** [player] land.shroomlight */
+    public static function LAND_SHROOMLIGHT() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.shroomlight')); }
+    /** [player] land.slime */
+    public static function LAND_SLIME() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.slime')); }
+    /** [player] land.snow */
+    public static function LAND_SNOW() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.snow')); }
+    /** [player] land.soul_sand */
+    public static function LAND_SOUL_SAND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.soul_sand')); }
+    /** [player] land.soul_soil */
+    public static function LAND_SOUL_SOIL() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.soul_soil')); }
     /** [player] land.spore_blossom */
     public static function LAND_SPORE_BLOSSOM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.spore_blossom')); }
+    /** [player] land.stem */
+    public static function LAND_STEM() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.stem')); }
+    /** [player] land.stone */
+    public static function LAND_STONE() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.stone')); }
+    /** [player] land.vines */
+    public static function LAND_VINES() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.vines')); }
+    /** [player] land.wood */
+    public static function LAND_WOOD() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('land.wood')); }
     /** [player] mace.heavy_smash_ground */
     public static function MACE_HEAVY_SMASH_GROUND() : PlaySound{ static $cache = null; return clone($cache ??= new PlaySound('mace.heavy_smash_ground')); }
     /** [player] mace.heavy_smash_ground @see self::MACE_HEAVY_SMASH_GROUND() */

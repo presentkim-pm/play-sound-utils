@@ -33,19 +33,28 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
 use pocketmine\world\sound\Sound;
 
+use function array_filter;
+use function array_values;
+
 final class PlaySound implements Sound{
 
     /**
-     * @param string   $soundName The name of the sound to play
-     * @param float    $volume    The volume of the sound, based on 1.0
-     * @param float    $pitch     The pitch of the sound, based on 1.0
-     * @param int|null $serverSoundHandle The optional value for sound handle (Added 1.26.20)
+     * @param string     $soundName                The name of the sound to play
+     * @param float      $volume                   The volume of the sound, based on 1.0
+     * @param float      $pitch                    The pitch of the sound, based on 1.0
+     * @param int|null   $serverSoundHandle        The optional value for sound handle (Added 1.26.20)
+     * @param int        $loopCount                How many times the client repeats the sound, 0 plays it once
+     * @param bool       $bypassListenerRangeCheck Whether the client plays the sound even if it is out of listener range
+     * @param float|null $playbackPositionSeconds  The optional position in seconds to start playback from
      */
     public function __construct(
         private string $soundName,
         private float $volume = 1.0,
         private float $pitch = 1.0,
-        private ?int $serverSoundHandle = null
+        private ?int $serverSoundHandle = null,
+        private int $loopCount = 0,
+        private bool $bypassListenerRangeCheck = false,
+        private ?float $playbackPositionSeconds = null
     ){}
 
     public function getSoundName() : string{
@@ -79,17 +88,57 @@ final class PlaySound implements Sound{
         return $this->serverSoundHandle;
     }
 
-    public function setServerSoundHandle(?int $serverSoundHandle) : PlaySound{
+    public function setServerSoundHandle(?int $serverSoundHandle) : self{
         $this->serverSoundHandle = $serverSoundHandle;
+        return $this;
+    }
+
+    public function getLoopCount() : int{
+        return $this->loopCount;
+    }
+
+    public function setLoopCount(int $loopCount) : self{
+        $this->loopCount = $loopCount;
+        return $this;
+    }
+
+    public function isBypassListenerRangeCheck() : bool{
+        return $this->bypassListenerRangeCheck;
+    }
+
+    public function setBypassListenerRangeCheck(bool $bypassListenerRangeCheck) : self{
+        $this->bypassListenerRangeCheck = $bypassListenerRangeCheck;
+        return $this;
+    }
+
+    public function getPlaybackPositionSeconds() : ?float{
+        return $this->playbackPositionSeconds;
+    }
+
+    public function setPlaybackPositionSeconds(?float $playbackPositionSeconds) : self{
+        $this->playbackPositionSeconds = $playbackPositionSeconds;
         return $this;
     }
 
     /** @return ClientboundPacket[] */
     public function encode(Vector3 $pos) : array{
-        return [self::createPacket($pos, $this->soundName, $this->volume, $this->pitch, $this->serverSoundHandle)];
+        return [
+            self::createPacket(
+                $pos,
+                $this->soundName,
+                $this->volume,
+                $this->pitch,
+                $this->serverSoundHandle,
+                $this->loopCount,
+                $this->bypassListenerRangeCheck,
+                $this->playbackPositionSeconds
+            )
+        ];
     }
 
     /**
+     * Players that are no longer connected are skipped.
+     *
      * @param Player|Player[] $recipients The player to send the sound to
      * @param Vector3|null    $vec        The position to play the sound, or null to play at the player's position
      */
@@ -97,6 +146,11 @@ final class PlaySound implements Sound{
         if($recipients instanceof Player){
             $recipients = [$recipients];
         }
+        $recipients = array_values(array_filter($recipients, static fn(Player $player) : bool => $player->isConnected()));
+        if($recipients === []){
+            return;
+        }
+
         if($vec === null){
             foreach($recipients as $recipient){
                 foreach($this->encode($recipient->getPosition()) as $packet){
@@ -109,12 +163,17 @@ final class PlaySound implements Sound{
     }
 
     /**
+     * Does nothing if the player is no longer connected.
+     *
      * @param Player $player    The player to send the sound to
      * @param string $soundName The name of the sound to play
      * @param float  $volume    The volume of the sound, based on 1.0
      * @param float  $pitch     The pitch of the sound, based on 1.0
      */
     public static function sendTo(Player $player, string $soundName, float $volume = 1.0, float $pitch = 1.0) : void{
+        if(!$player->isConnected()){
+            return;
+        }
         $player->getNetworkSession()->sendDataPacket(
             self::createPacket($player->getPosition(), $soundName, $volume, $pitch)
         );
@@ -138,15 +197,37 @@ final class PlaySound implements Sound{
     }
 
     /**
-     * @param Vector3 $vec       The position to play the sound
-     * @param string  $soundName The name of the sound to play
-     * @param float   $volume    The volume of the sound, based on 1.0
-     * @param float   $pitch     The pitch of the sound, based on 1.0
+     * @param Vector3    $vec                      The position to play the sound
+     * @param string     $soundName                The name of the sound to play
+     * @param float      $volume                   The volume of the sound, based on 1.0
+     * @param float      $pitch                    The pitch of the sound, based on 1.0
+     * @param int|null   $serverSoundHandle        The optional value for sound handle
+     * @param int        $loopCount                How many times the client repeats the sound, 0 plays it once
+     * @param bool       $bypassListenerRangeCheck Whether the client plays the sound even if it is out of listener range
+     * @param float|null $playbackPositionSeconds  The optional position in seconds to start playback from
      */
     public static function createPacket(
-        Vector3 $vec, string $soundName, float $volume = 1.0, float $pitch = 1.0, ?int $serverSoundHandle = null
+        Vector3 $vec,
+        string $soundName,
+        float $volume = 1.0,
+        float $pitch = 1.0,
+        ?int $serverSoundHandle = null,
+        int $loopCount = 0,
+        bool $bypassListenerRangeCheck = false,
+        ?float $playbackPositionSeconds = null
     ) : PlaySoundPacket{
-        return PlaySoundPacket::create($soundName, $vec->x, $vec->y, $vec->z, $volume, $pitch, $serverSoundHandle);
+        return PlaySoundPacket::create(
+            $soundName,
+            $vec->x,
+            $vec->y,
+            $vec->z,
+            $volume,
+            $pitch,
+            $loopCount,
+            $bypassListenerRangeCheck,
+            $serverSoundHandle,
+            $playbackPositionSeconds
+        );
     }
 
 }
